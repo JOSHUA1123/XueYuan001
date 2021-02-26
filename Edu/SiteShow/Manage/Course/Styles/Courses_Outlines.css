@@ -1,0 +1,26 @@
+﻿@charset "utf-8";
+
+#leftBox {
+	
+
+}
+.rightBox {
+	
+}
+.treeIco{
+	font-size:28px;
+	height:20px;
+	line-height:40px;	
+}
+
+.RowDelete
+{
+    float:none;
+}
+l{
+	background-image: url(../../Images/live-icon.gif);
+	background-repeat: no-repeat;	
+	width:24px;
+	height:24px;
+	display:inline-block;
+}

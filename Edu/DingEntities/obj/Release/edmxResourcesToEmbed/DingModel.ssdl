@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="hospitalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DingTalkUser">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="userid" Type="nvarchar" MaxLength="50" />
+    <Property Name="unionid" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="mobile" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="department" Type="nvarchar" MaxLength="300" />
+    <Property Name="Editdate" Type="datetime" Nullable="false" />
+    <Property Name="Inputdate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MyUser">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="64" />
+    <Property Name="YourPop" Type="varchar" MaxLength="20" />
+    <Property Name="YourName" Type="varchar" MaxLength="20" />
+    <Property Name="Sex" Type="varchar" MaxLength="50" />
+    <Property Name="Age" Type="int" />
+    <Property Name="Tel" Type="varchar" MaxLength="15" />
+    <Property Name="Mobile" Type="varchar" MaxLength="15" />
+    <Property Name="Address" Type="varchar" MaxLength="100" />
+    <Property Name="Remark" Type="varchar" MaxLength="200" />
+    <Property Name="RegDate" Type="datetime" />
+    <Property Name="IsDel" Type="bit" />
+    <Property Name="OperPop" Type="varchar" MaxLength="1000" />
+    <Property Name="classID" Type="int" />
+    <Property Name="UsingSickID" Type="varchar" MaxLength="110" />
+    <Property Name="KeFuPercent" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="BirthYear" Type="int" />
+    <Property Name="BirthM" Type="int" />
+    <Property Name="BirthD" Type="int" />
+    <Property Name="jiaose" Type="int" />
+    <Property Name="DelState" Type="nvarchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MyUser_Yuyue">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+    <Property Name="userName" Type="nvarchar" MaxLength="50" />
+    <Property Name="mobile" Type="varchar" MaxLength="20" />
+    <Property Name="department" Type="varchar" MaxLength="100" />
+    <Property Name="avatar" Type="varchar" MaxLength="200" />
+    <Property Name="groupID" Type="int" />
+    <Property Name="templatesID" Type="int" />
+    <Property Name="topUserID" Type="varchar" MaxLength="50" />
+    <Property Name="dingdingUserid" Type="varchar" MaxLength="50" />
+    <Property Name="addTime" Type="datetime" />
+    <Property Name="isDel" Type="int" />
+    <Property Name="unionid" Type="varchar" MaxLength="100" />
+    <Property Name="updateTime" Type="datetime" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“hospital.dbo.User_dingding”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="User_dingding">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" />
+    <Property Name="DingOpenID" Type="varchar" MaxLength="50" />
+    <Property Name="DingID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="hospitalModelStoreContainer">
+    <EntitySet Name="DingTalkUser" EntityType="Self.DingTalkUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MyUser" EntityType="Self.MyUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MyUser_Yuyue" EntityType="Self.MyUser_Yuyue" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User_dingding" EntityType="Self.User_dingding" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [User_dingding].[ID] AS [ID], 
+    [User_dingding].[UserID] AS [UserID], 
+    [User_dingding].[DingOpenID] AS [DingOpenID], 
+    [User_dingding].[DingID] AS [DingID]
+    FROM [dbo].[User_dingding] AS [User_dingding]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0A8B3025-D13D-4DAB-909A-12D4A0E338CA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ViewData</RootNamespace>
+    <AssemblyName>ViewData</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.JScript" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attri\Client\ClientAttribute.cs" />
+    <Compile Include="Attri\Client\DesktopAttribute.cs" />
+    <Compile Include="Attri\Client\MobileAttribute.cs" />
+    <Compile Include="Attri\Client\TVAttribute.cs" />
+    <Compile Include="Attri\Client\WebAttribute.cs" />
+    <Compile Include="Attri\Client\WeixinAttribute.cs" />
+    <Compile Include="Attri\HttpVerb\HttpAttribute.cs" />
+    <Compile Include="Attri\HttpVerb\HttpDeleteAttribute.cs" />
+    <Compile Include="Attri\HttpVerb\HttpGetAttribute.cs" />
+    <Compile Include="Attri\HttpVerb\HttpOptionsAttribute.cs" />
+    <Compile Include="Attri\HttpVerb\HttpPatchAttribute.cs" />
+    <Compile Include="Attri\HttpVerb\HttpPostAttribute.cs" />
+    <Compile Include="Attri\HttpVerb\HttpPutAttribute.cs" />
+    <Compile Include="Attri\Login\AdminAttribute.cs" />
+    <Compile Include="Attri\Login\LoginAttribute.cs" />
+    <Compile Include="Attri\Login\StudentAttribute.cs" />
+    <Compile Include="Attri\Login\TeacherAttribute.cs" />
+    <Compile Include="Attri\Purview\BuyAttribute.cs" />
+    <Compile Include="Attri\Purview\PurviewAttribute.cs" />
+    <Compile Include="Attri\Purview\StudyAttribute.cs" />
+    <Compile Include="Attri\Range\AnywhereAttribute.cs" />
+    <Compile Include="Attri\Range\DomainAttribute.cs" />
+    <Compile Include="Attri\Range\IntranetAttribute.cs" />
+    <Compile Include="Attri\Range\LocalhostAttribute.cs" />
+    <Compile Include="Attri\Range\RangeAttribute.cs" />
+    <Compile Include="Attri\WeishaAttr.cs" />
+    <Compile Include="DataResult.cs" />
+    <Compile Include="ExecuteMethod.cs" />
+    <Compile Include="Helper\Browser.cs" />
+    <Compile Include="Helper\Cache.cs" />
+    <Compile Include="Helper\ConvertToAnyValue.cs" />
+    <Compile Include="Helper\ExceptionWeisha.cs" />
+    <Compile Include="Helper\Login\Admin.cs" />
+    <Compile Include="Helper\Login\LoginPatternEnum.cs" />
+    <Compile Include="Helper\Server.cs" />
+    <Compile Include="IViewAPI.cs" />
+    <Compile Include="Letter.cs" />
+    <Compile Include="ListResult.cs" />
+    <Compile Include="Methods\Account.cs" />
+    <Compile Include="Methods\Course.cs" />
+    <Compile Include="Methods\Helper.cs" />
+    <Compile Include="Methods\Live.cs" />
+    <Compile Include="Methods\Message.cs" />
+    <Compile Include="Methods\Organ.cs" />
+    <Compile Include="Methods\Outline.cs" />
+    <Compile Include="Methods\Platform.cs" />
+    <Compile Include="Methods\Subject.cs" />
+    <Compile Include="Methods\Teacher.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{5a3a6656-2dc8-48ac-b33a-2a73ca83ce23}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataBaseInfo\DataBaseInfo.csproj">
+      <Project>{8106B4A5-10CA-4CD8-A0A8-8CDD2CB3CEA2}</Project>
+      <Name>DataBaseInfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntitiesInfo\EntitiesInfo.csproj">
+      <Project>{8446a414-3921-44f5-ba7e-e78ab2809a90}</Project>
+      <Name>EntitiesInfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Extend\Extend.csproj">
+      <Project>{cfa3d35a-2631-4c07-b755-acf7b8978f5d}</Project>
+      <Name>Extend</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\pili-sdk-csharp\pili-sdk-csharp.csproj">
+      <Project>{5332e2ab-1ba5-4296-9ab4-b36284fa47b3}</Project>
+      <Name>pili-sdk-csharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServiceInterfaces\ServiceInterfaces.csproj">
+      <Project>{7a812165-253e-4d6c-a5ee-b8fd02d8693f}</Project>
+      <Name>ServiceInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeiSha.WebControl\WeiSha.WebControl.csproj">
+      <Project>{fb2d74bc-5742-4f98-8ab0-d66a85db9cf9}</Project>
+      <Name>WeiSha.WebControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7A812165-253E-4D6C-A5EE-B8FD02D8693F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ServiceInterfaces</RootNamespace>
+    <AssemblyName>ServiceInterfaces</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.0.0.999, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.1.0.0\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.4.1\lib\net45\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.4.1\lib\net45\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.4.1\lib\net45\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.4.1\lib\net45\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IAccessory.cs" />
+    <Compile Include="IAccounts.cs" />
+    <Compile Include="IAddressList.cs" />
+    <Compile Include="IColumns.cs" />
+    <Compile Include="IContents.cs" />
+    <Compile Include="ICourse.cs" />
+    <Compile Include="IDailyLog.cs" />
+    <Compile Include="IDepart.cs" />
+    <Compile Include="IEmpGroup.cs" />
+    <Compile Include="IEmployee.cs" />
+    <Compile Include="IExamination.cs" />
+    <Compile Include="IGuide.cs" />
+    <Compile Include="IInternalLink.cs" />
+    <Compile Include="IKnowledge.cs" />
+    <Compile Include="ILearningCard.cs" />
+    <Compile Include="ILimitDomain.cs" />
+    <Compile Include="ILinks.cs" />
+    <Compile Include="ILive.cs" />
+    <Compile Include="ILogs.cs" />
+    <Compile Include="IManageMenu.cs" />
+    <Compile Include="IMessage.cs" />
+    <Compile Include="IMessageBoard.cs" />
+    <Compile Include="IMobileUser.cs" />
+    <Compile Include="INotice.cs" />
+    <Compile Include="IOrganization.cs" />
+    <Compile Include="IOutline.cs" />
+    <Compile Include="IPayInterface.cs" />
+    <Compile Include="IPosition.cs" />
+    <Compile Include="IProduct.cs" />
+    <Compile Include="IProfitSharing.cs" />
+    <Compile Include="IPurview.cs" />
+    <Compile Include="IQuestions.cs" />
+    <Compile Include="IRecharge.cs" />
+    <Compile Include="ISMS.cs" />
+    <Compile Include="ISSO.cs" />
+    <Compile Include="IStudent.cs" />
+    <Compile Include="IStyle.cs" />
+    <Compile Include="ISubject.cs" />
+    <Compile Include="ISystemPara.cs" />
+    <Compile Include="ITask.cs" />
+    <Compile Include="ITeacher.cs" />
+    <Compile Include="ITeam.cs" />
+    <Compile Include="ITemplate.cs" />
+    <Compile Include="ITestPaper.cs" />
+    <Compile Include="ITrPlan.cs" />
+    <Compile Include="IUser.cs" />
+    <Compile Include="IVote.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{5a3a6656-2dc8-48ac-b33a-2a73ca83ce23}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataBaseInfo\DataBaseInfo.csproj">
+      <Project>{8106B4A5-10CA-4CD8-A0A8-8CDD2CB3CEA2}</Project>
+      <Name>DataBaseInfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntitiesInfo\EntitiesInfo.csproj">
+      <Project>{8446a414-3921-44f5-ba7e-e78ab2809a90}</Project>
+      <Name>EntitiesInfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\pili-sdk-csharp\pili-sdk-csharp.csproj">
+      <Project>{5332e2ab-1ba5-4296-9ab4-b36284fa47b3}</Project>
+      <Name>pili-sdk-csharp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C925A07F-2A4E-43CB-8267-7721FBFB857E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Template</RootNamespace>
+    <AssemblyName>Template</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Handler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegisterFunction.cs" />
+    <Compile Include="Tags\DetailTag\Article.cs" />
+    <Compile Include="Tags\ListTag\Columns.cs" />
+    <Compile Include="Tags\ListTag\Course.cs" />
+    <Compile Include="Tags\ListTag\Guide.cs" />
+    <Compile Include="Tags\ListTag\Links.cs" />
+    <Compile Include="Tags\ListTag\Linkssort.cs" />
+    <Compile Include="Tags\ListTag\News.cs" />
+    <Compile Include="Tags\ListTag\Notice.cs" />
+    <Compile Include="Tags\ListTag\Showpic.cs" />
+    <Compile Include="Tags\ListTag\Subject.cs" />
+    <Compile Include="Tags\ListTag\Teacher.cs" />
+    <Compile Include="Tags\RepeaterTag\Guidecolumns.cs" />
+    <Compile Include="Tags\RepeaterTag\Knowledgesort.cs" />
+    <Compile Include="Tags\RepeaterTag\ManageMenu.cs" />
+    <Compile Include="Tags\RepeaterTag\Subject.cs" />
+    <Compile Include="Tags\TagElement.cs" />
+    <Compile Include="Tags\TreeObject.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{5a3a6656-2dc8-48ac-b33a-2a73ca83ce23}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataBaseInfo\DataBaseInfo.csproj">
+      <Project>{8106b4a5-10ca-4cd8-a0a8-8cdd2cb3cea2}</Project>
+      <Name>DataBaseInfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntitiesInfo\EntitiesInfo.csproj">
+      <Project>{8446a414-3921-44f5-ba7e-e78ab2809a90}</Project>
+      <Name>EntitiesInfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServiceInterfaces\ServiceInterfaces.csproj">
+      <Project>{7A812165-253E-4D6C-A5EE-B8FD02D8693F}</Project>
+      <Name>ServiceInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Template.Engine\VTemplate.Engine.csproj">
+      <Project>{67F3EF1C-9205-4BAA-8587-C20B1D27B2F6}</Project>
+      <Name>VTemplate.Engine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

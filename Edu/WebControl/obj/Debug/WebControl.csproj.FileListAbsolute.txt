@@ -1,0 +1,17 @@
+G:\XueYuan\WebControl\bin\Debug\WebControl.dll
+G:\XueYuan\WebControl\bin\Debug\WebControl.pdb
+G:\XueYuan\WebControl\bin\Debug\Common.dll
+G:\XueYuan\WebControl\bin\Debug\Spring.Core.dll
+G:\XueYuan\WebControl\bin\Debug\Common.Logging.Core.dll
+G:\XueYuan\WebControl\bin\Debug\Common.Logging.dll
+G:\XueYuan\WebControl\bin\Debug\Common.pdb
+G:\XueYuan\WebControl\bin\Debug\Spring.Core.pdb
+G:\XueYuan\WebControl\bin\Debug\Spring.Core.xml
+G:\XueYuan\WebControl\bin\Debug\Common.Logging.Core.pdb
+G:\XueYuan\WebControl\bin\Debug\Common.Logging.Core.xml
+G:\XueYuan\WebControl\bin\Debug\Common.Logging.pdb
+G:\XueYuan\WebControl\bin\Debug\Common.Logging.xml
+G:\XueYuan\WebControl\obj\Debug\WebControl.csprojAssemblyReference.cache
+G:\XueYuan\WebControl\obj\Debug\WebControl.csproj.CopyComplete
+G:\XueYuan\WebControl\obj\Debug\WebControl.dll
+G:\XueYuan\WebControl\obj\Debug\WebControl.pdb

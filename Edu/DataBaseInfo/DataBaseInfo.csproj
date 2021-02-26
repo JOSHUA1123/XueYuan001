@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8106B4A5-10CA-4CD8-A0A8-8CDD2CB3CEA2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataBaseInfo</RootNamespace>
+    <AssemblyName>DataBaseInfo</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.JScript" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Norm.Attributes\MongoIgnoreAttribute.cs" />
+    <Compile Include="Norm.Attributes\MongoIgnoreIfNullAttribute.cs" />
+    <Compile Include="Norm.BSON.DbTypes\DbReference.cs" />
+    <Compile Include="Norm.BSON.DbTypes\GridFile.cs" />
+    <Compile Include="Norm.BSON.DbTypes\ObjectIdGenerator.cs" />
+    <Compile Include="Norm.BSON.TypeConverters\CultureInfoTypeConverter.cs" />
+    <Compile Include="Norm.BSON\ArrayWrapper.cs" />
+    <Compile Include="Norm.BSON\BaseWrapper.cs" />
+    <Compile Include="Norm.BSON\BsonDeserializer.cs" />
+    <Compile Include="Norm.BSON\BsonHelper.cs" />
+    <Compile Include="Norm.BSON\BsonSerializer.cs" />
+    <Compile Include="Norm.BSON\BsonSerializerBase.cs" />
+    <Compile Include="Norm.BSON\BSONTypes.cs" />
+    <Compile Include="Norm.BSON\CollectionWrapper.cs" />
+    <Compile Include="Norm.BSON\Command.cs" />
+    <Compile Include="Norm.BSON\Document.cs" />
+    <Compile Include="Norm.BSON\DocumentExceedsSizeLimitsException.cs" />
+    <Compile Include="Norm.BSON\Expando.cs" />
+    <Compile Include="Norm.BSON\ExpandoProperty.cs" />
+    <Compile Include="Norm.BSON\IBsonTypeConverter.cs" />
+    <Compile Include="Norm.BSON\IdPropertyFinder.cs" />
+    <Compile Include="Norm.BSON\IExpando.cs" />
+    <Compile Include="Norm.BSON\ListHelper.cs" />
+    <Compile Include="Norm.BSON\ListWrapper.cs" />
+    <Compile Include="Norm.BSON\MagicProperty.cs" />
+    <Compile Include="Norm.BSON\ModifierCommand.cs" />
+    <Compile Include="Norm.BSON\ObjectParser.cs" />
+    <Compile Include="Norm.BSON\QualifierCommand.cs" />
+    <Compile Include="Norm.BSON\ReflectionHelper.cs" />
+    <Compile Include="Norm.Collections\CollectionHiLoIdGenerator.cs" />
+    <Compile Include="Norm.Collections\CreateCollectionOptions.cs" />
+    <Compile Include="Norm.Collections\HiLoIdGenerator.cs" />
+    <Compile Include="Norm.Collections\IMongoCollection.cs" />
+    <Compile Include="Norm.Collections\MongoCollection.cs" />
+    <Compile Include="Norm.Collections\MongoCollectionCompoundIndex.cs" />
+    <Compile Include="Norm.Commands.Modifiers\AddToSetOperation.cs" />
+    <Compile Include="Norm.Commands.Modifiers\IModifierExpression.cs" />
+    <Compile Include="Norm.Commands.Modifiers\ModifierExpression.cs" />
+    <Compile Include="Norm.Commands.Modifiers\PopOperation.cs" />
+    <Compile Include="Norm.Commands.Modifiers\PopType.cs" />
+    <Compile Include="Norm.Commands.Modifiers\PullOperation.cs" />
+    <Compile Include="Norm.Commands.Modifiers\PushAllOperation.cs" />
+    <Compile Include="Norm.Commands.Modifiers\PushOperation.cs" />
+    <Compile Include="Norm.Commands.Modifiers\SetOperation.cs" />
+    <Compile Include="Norm.Commands.Qualifiers\AllQualifier.cs" />
+    <Compile Include="Norm.Commands.Qualifiers\ElementMatch.cs" />
+    <Compile Include="Norm.Commands.Qualifiers\ExistsQualifier.cs" />
+    <Compile Include="Norm.Commands.Qualifiers\GreaterOrEqualQualifier.cs" />
+    <Compile Include="Norm.Commands.Qualifiers\GreaterThanQualifier.cs" />
+    <Compile Include="Norm.Commands.Qualifiers\InQualifier.cs" />
+    <Compile Include="Norm.Commands.Qualifiers\LessOrEqualQualifier.cs" />
+    <Compile Include="Norm.Commands.Qualifiers\LessThanQualifier.cs" />
+    <Compile Include="Norm.Commands.Qualifiers\NotEqualQualifier.cs" />
+    <Compile Include="Norm.Commands.Qualifiers\NotInQualifier.cs" />
+    <Compile Include="Norm.Commands.Qualifiers\SizeQualifier.cs" />
+    <Compile Include="Norm.Commands.Qualifiers\SliceQualifier.cs" />
+    <Compile Include="Norm.Commands.Qualifiers\WhereQualifier.cs" />
+    <Compile Include="Norm.Commands\IncrementOperation.cs" />
+    <Compile Include="Norm.Commands\OrQualifier.cs" />
+    <Compile Include="Norm.Configuration\ConfigurationContainer.cs" />
+    <Compile Include="Norm.Configuration\IConfigurationContainer.cs" />
+    <Compile Include="Norm.Configuration\IMongoConfigurationMap.cs" />
+    <Compile Include="Norm.Configuration\IPropertyMappingExpression.cs" />
+    <Compile Include="Norm.Configuration\ITypeConfiguration.cs" />
+    <Compile Include="Norm.Configuration\MongoConfiguration.cs" />
+    <Compile Include="Norm.Configuration\MongoConfigurationMap.cs" />
+    <Compile Include="Norm.Configuration\MongoConfigurationMapException.cs" />
+    <Compile Include="Norm.Configuration\MongoConfigurationTypeMap.cs" />
+    <Compile Include="Norm.Configuration\MongoTypeConfiguration.cs" />
+    <Compile Include="Norm.Configuration\PropertyMappingExpression.cs" />
+    <Compile Include="Norm.GridFS\FileChunk.cs" />
+    <Compile Include="Norm.GridFS\GridFile.cs" />
+    <Compile Include="Norm.GridFS\GridFileCollection.cs" />
+    <Compile Include="Norm.GridFS\Helpers.cs" />
+    <Compile Include="Norm.Linq\ExpressionVisitor.cs" />
+    <Compile Include="Norm.Linq\IMongoQuery.cs" />
+    <Compile Include="Norm.Linq\IMongoQueryResults.cs" />
+    <Compile Include="Norm.Linq\LinqExtensions.cs" />
+    <Compile Include="Norm.Linq\LinqTypeHelper.cs" />
+    <Compile Include="Norm.Linq\MapReduceParameters.cs" />
+    <Compile Include="Norm.Linq\MapReduceResult.cs" />
+    <Compile Include="Norm.Linq\MongoQuery.cs" />
+    <Compile Include="Norm.Linq\MongoQueryExecutor.cs" />
+    <Compile Include="Norm.Linq\MongoQueryProvider.cs" />
+    <Compile Include="Norm.Linq\MongoQueryTranslator.cs" />
+    <Compile Include="Norm.Linq\PartialEvaluator.cs" />
+    <Compile Include="Norm.Linq\QueryTranslationResults.cs" />
+    <Compile Include="Norm.Protocol.Messages\DeleteMessage.cs" />
+    <Compile Include="Norm.Protocol.Messages\FindAndModifyResult.cs" />
+    <Compile Include="Norm.Protocol.Messages\GetMoreMessage.cs" />
+    <Compile Include="Norm.Protocol.Messages\IndexOption.cs" />
+    <Compile Include="Norm.Protocol.Messages\InsertMessage.cs" />
+    <Compile Include="Norm.Protocol.Messages\MapReduceMessage.cs" />
+    <Compile Include="Norm.Protocol.Messages\QueryMessage.cs" />
+    <Compile Include="Norm.Protocol.Messages\ReplyMessage.cs" />
+    <Compile Include="Norm.Protocol.Messages\UpdateMessage.cs" />
+    <Compile Include="Norm.Protocol.Messages\UpdateOption.cs" />
+    <Compile Include="Norm.Protocol.SystemMessages.Requests\AuthenticationRequest.cs" />
+    <Compile Include="Norm.Protocol.SystemMessages.Requests\CollectionStatisticsRequest.cs" />
+    <Compile Include="Norm.Protocol.SystemMessages.Requests\DropDatabaseRequest.cs" />
+    <Compile Include="Norm.Protocol.SystemMessages.Requests\ListDatabasesRequest.cs" />
+    <Compile Include="Norm.Protocol.SystemMessages.Requests\MongoIndex.cs" />
+    <Compile Include="Norm.Protocol.SystemMessages.Request\CreateCollectionRequest.cs" />
+    <Compile Include="Norm.Protocol.SystemMessages\ISystemQuery.cs" />
+    <Compile Include="Norm.Protocol.SystemMessages\ProfileLevel.cs" />
+    <Compile Include="Norm.Protocol\ExplainRequest.cs" />
+    <Compile Include="Norm.Protocol\IUpdateWithoutId.cs" />
+    <Compile Include="Norm.Protocol\Message.cs" />
+    <Compile Include="Norm.Protocol\MessageHeader.cs" />
+    <Compile Include="Norm.Protocol\MongoOp.cs" />
+    <Compile Include="Norm.Responses\AssertInfoResponse.cs" />
+    <Compile Include="Norm.Responses\AssertsResponse.cs" />
+    <Compile Include="Norm.Responses\BackgroundFlushingResponse.cs" />
+    <Compile Include="Norm.Responses\BaseStatusMessage.cs" />
+    <Compile Include="Norm.Responses\BuildInfoResponse.cs" />
+    <Compile Include="Norm.Responses\CollectionInfo.cs" />
+    <Compile Include="Norm.Responses\CollectionStatistics.cs" />
+    <Compile Include="Norm.Responses\ConnectionsResponse.cs" />
+    <Compile Include="Norm.Responses\CurrentOperationContainer.cs" />
+    <Compile Include="Norm.Responses\CurrentOperationResponse.cs" />
+    <Compile Include="Norm.Responses\DatabaseInfo.cs" />
+    <Compile Include="Norm.Responses\DeleteIndicesResponse.cs" />
+    <Compile Include="Norm.Responses\DistinctValuesResponse.cs" />
+    <Compile Include="Norm.Responses\DroppedCollectionResponse.cs" />
+    <Compile Include="Norm.Responses\DroppedDatabaseResponse.cs" />
+    <Compile Include="Norm.Responses\ExplainPlan.cs" />
+    <Compile Include="Norm.Responses\ExplainResponse.cs" />
+    <Compile Include="Norm.Responses\ExtraInfoResponse.cs" />
+    <Compile Include="Norm.Responses\ForceSyncResponse.cs" />
+    <Compile Include="Norm.Responses\GenericCommandResponse.cs" />
+    <Compile Include="Norm.Responses\GetNonceResponse.cs" />
+    <Compile Include="Norm.Responses\GlobalLockResponse.cs" />
+    <Compile Include="Norm.Responses\IndexCountersResponse.cs" />
+    <Compile Include="Norm.Responses\LastErrorResponse.cs" />
+    <Compile Include="Norm.Responses\ListDatabasesResponse.cs" />
+    <Compile Include="Norm.Responses\LockQueueInfo.cs" />
+    <Compile Include="Norm.Responses\MapReduceResponse.cs" />
+    <Compile Include="Norm.Responses\MemoryResponse.cs" />
+    <Compile Include="Norm.Responses\OpCountersResponse.cs" />
+    <Compile Include="Norm.Responses\PreviousErrorResponse.cs" />
+    <Compile Include="Norm.Responses\ProfileLevelResponse.cs" />
+    <Compile Include="Norm.Responses\ProfilingInformationResponse.cs" />
+    <Compile Include="Norm.Responses\ServerStatusResponse.cs" />
+    <Compile Include="Norm.Responses\SetProfileResponse.cs" />
+    <Compile Include="Norm.Responses\ValidateCollectionResponse.cs" />
+    <Compile Include="Norm\Connection.cs" />
+    <Compile Include="Norm\ConnectionProvider.cs" />
+    <Compile Include="Norm\ConnectionProviderFactory.cs" />
+    <Compile Include="Norm\ConnectionStringBuilder.cs" />
+    <Compile Include="Norm\IConnection.cs" />
+    <Compile Include="Norm\IConnectionProvider.cs" />
+    <Compile Include="Norm\IHideObjectMembers.cs" />
+    <Compile Include="Norm\IMongo.cs" />
+    <Compile Include="Norm\IMongoAdmin.cs" />
+    <Compile Include="Norm\IMongoDatabase.cs" />
+    <Compile Include="Norm\IMongoGrouping.cs" />
+    <Compile Include="Norm\IOptionsContainer.cs" />
+    <Compile Include="Norm\LockTimeoutException.cs" />
+    <Compile Include="Norm\M.cs" />
+    <Compile Include="Norm\MapReduce.cs" />
+    <Compile Include="Norm\MapReduceOptions.cs" />
+    <Compile Include="Norm\MapReduceResult.cs" />
+    <Compile Include="Norm\Mongo.cs" />
+    <Compile Include="Norm\MongoAdmin.cs" />
+    <Compile Include="Norm\MongoCollectionExtensions.cs" />
+    <Compile Include="Norm\MongoDatabase.cs" />
+    <Compile Include="Norm\MongoDiscriminatedAttribute.cs" />
+    <Compile Include="Norm\MongoException.cs" />
+    <Compile Include="Norm\MongoIdentifierAttribute.cs" />
+    <Compile Include="Norm\MongoQueryExecutor.cs" />
+    <Compile Include="Norm\NormalConnectionProvider.cs" />
+    <Compile Include="Norm\ObjectId.cs" />
+    <Compile Include="Norm\ObjectIdTypeConverter.cs" />
+    <Compile Include="Norm\OrderBy.cs" />
+    <Compile Include="Norm\PooledConnectionProvider.cs" />
+    <Compile Include="Norm\PullAllOperation.cs" />
+    <Compile Include="Norm\Q.cs" />
+    <Compile Include="Norm\QueuedConnectionProvider.cs" />
+    <Compile Include="Norm\ScopedCode.cs" />
+    <Compile Include="Norm\Server.cs" />
+    <Compile Include="Norm\TimedLock.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WeiSha.Data.Cache\DataCacheDependent.cs" />
+    <Compile Include="WeiSha.Data.Cache\ICacheDependent.cs" />
+    <Compile Include="WeiSha.Data.Cache\ICacheStrategy.cs" />
+    <Compile Include="WeiSha.Data.Cache\IDistributedCacheStrategy.cs" />
+    <Compile Include="WeiSha.Data.Cache\ILocalCacheStrategy.cs" />
+    <Compile Include="WeiSha.Data.Converter\ConverterFactory.cs" />
+    <Compile Include="WeiSha.Data.Converter\IStringConverter.cs" />
+    <Compile Include="WeiSha.Data.Converter\PropertyHandler.cs" />
+    <Compile Include="WeiSha.Data.Converter\ToArray.cs" />
+    <Compile Include="WeiSha.Data.Converter\ToBool.cs" />
+    <Compile Include="WeiSha.Data.Converter\ToBoolArray.cs" />
+    <Compile Include="WeiSha.Data.Converter\ToByte.cs" />
+    <Compile Include="WeiSha.Data.Converter\ToByteArray.cs" />
+    <Compile Include="WeiSha.Data.Converter\ToChar.cs" />
+    <Compile Include="WeiSha.Data.Converter\ToCharArray.cs" />
+    <Compile Include="WeiSha.Data.Converter\ToDateTime.cs" />
+    <Compile Include="WeiSha.Data.Converter\ToDateTimeArray.cs" />
+    <Compile Include="WeiSha.Data.Converter\ToDecimal.cs" />
+    <Compile Include="WeiSha.Data.Converter\ToDecimalArray.cs" />
+    <Compile Include="WeiSha.Data.Converter\ToDouble.cs" />
+    <Compile Include="WeiSha.Data.Converter\ToDoubleArray.cs" />
+    <Compile Include="WeiSha.Data.Converter\ToFloat.cs" />
+    <Compile Include="WeiSha.Data.Converter\ToFloatArray.cs" />
+    <Compile Include="WeiSha.Data.Converter\ToGuid.cs" />
+    <Compile Include="WeiSha.Data.Converter\ToGuidArray.cs" />
+    <Compile Include="WeiSha.Data.Converter\ToInt16.cs" />
+    <Compile Include="WeiSha.Data.Converter\ToInt16Array.cs" />
+    <Compile Include="WeiSha.Data.Converter\ToInt32.cs" />
+    <Compile Include="WeiSha.Data.Converter\ToInt32Array.cs" />
+    <Compile Include="WeiSha.Data.Converter\ToLong.cs" />
+    <Compile Include="WeiSha.Data.Converter\ToLongArray.cs" />
+    <Compile Include="WeiSha.Data.Converter\ToSbyte.cs" />
+    <Compile Include="WeiSha.Data.Converter\ToSbyteArray.cs" />
+    <Compile Include="WeiSha.Data.Converter\ToString.cs" />
+    <Compile Include="WeiSha.Data.Converter\ToStringArray.cs" />
+    <Compile Include="WeiSha.Data.Converter\ToUInt16.cs" />
+    <Compile Include="WeiSha.Data.Converter\ToUInt16Array.cs" />
+    <Compile Include="WeiSha.Data.Converter\ToUInt23.cs" />
+    <Compile Include="WeiSha.Data.Converter\ToUInt32Array.cs" />
+    <Compile Include="WeiSha.Data.Converter\ToULong.cs" />
+    <Compile Include="WeiSha.Data.Converter\ToULongArray.cs" />
+    <Compile Include="WeiSha.Data.Design\DescriptionAttribute.cs" />
+    <Compile Include="WeiSha.Data.Design\IEntity.cs" />
+    <Compile Include="WeiSha.Data.Design\IField.cs" />
+    <Compile Include="WeiSha.Data.Design\MappingAttribute.cs" />
+    <Compile Include="WeiSha.Data.Design\PrimaryKeyAttribute.cs" />
+    <Compile Include="WeiSha.Data.Design\ReadOnlyAttribute.cs" />
+    <Compile Include="WeiSha.Data.Design\SequenceAttribute.cs" />
+    <Compile Include="WeiSha.Data.Design\ViewEntity.cs" />
+    <Compile Include="WeiSha.Data.Logger\IExecuteLog.cs" />
+    <Compile Include="WeiSha.Data.Logger\ILog.cs" />
+    <Compile Include="WeiSha.Data.Logger\ILogable.cs" />
+    <Compile Include="WeiSha.Data.Logger\LogEventHandler.cs" />
+    <Compile Include="WeiSha.Data.Logger\LogType.cs" />
+    <Compile Include="WeiSha.Data.Mapping\FieldMapping.cs" />
+    <Compile Include="WeiSha.Data.Mapping\TableMapping.cs" />
+    <Compile Include="WeiSha.Data.Mapping\TableSetting.cs" />
+    <Compile Include="WeiSha.Data.MsAccess\MsAccessProvider.cs" />
+    <Compile Include="WeiSha.Data.Oracle\OracleProvider.cs" />
+    <Compile Include="WeiSha.Data.SqlServer9\SqlServer9Provider.cs" />
+    <Compile Include="WeiSha.Data.SqlServer\SqlServerProvider.cs" />
+    <Compile Include="WeiSha.Data\AllField.cs" />
+    <Compile Include="WeiSha.Data\ArrayList.cs" />
+    <Compile Include="WeiSha.Data\CompressType.cs" />
+    <Compile Include="WeiSha.Data\CoreHelper.cs" />
+    <Compile Include="WeiSha.Data\CustomField.cs" />
+    <Compile Include="WeiSha.Data\DataException.cs" />
+    <Compile Include="WeiSha.Data\DataHelper.cs" />
+    <Compile Include="WeiSha.Data\DataPage.cs" />
+    <Compile Include="WeiSha.Data\DbBatch.cs" />
+    <Compile Include="WeiSha.Data\DbField.cs" />
+    <Compile Include="WeiSha.Data\DbHelper.cs" />
+    <Compile Include="WeiSha.Data\DbProvider.cs" />
+    <Compile Include="WeiSha.Data\DbProviderFactory.cs" />
+    <Compile Include="WeiSha.Data\DbProviderType.cs" />
+    <Compile Include="WeiSha.Data\DbTrans.cs" />
+    <Compile Include="WeiSha.Data\DbValue.cs" />
+    <Compile Include="WeiSha.Data\DecryptEventHandler.cs" />
+    <Compile Include="WeiSha.Data\DeleteCreator.cs" />
+    <Compile Include="WeiSha.Data\DynamicCalls.cs" />
+    <Compile Include="WeiSha.Data\Entity.cs" />
+    <Compile Include="WeiSha.Data\EntityBase.cs" />
+    <Compile Include="WeiSha.Data\EntityConfig.cs" />
+    <Compile Include="WeiSha.Data\EntityState.cs" />
+    <Compile Include="WeiSha.Data\EnumDescriptionAttribute.cs" />
+    <Compile Include="WeiSha.Data\ExceptionType.cs" />
+    <Compile Include="WeiSha.Data\ExcludeField.cs" />
+    <Compile Include="WeiSha.Data\FastCreateInstanceHandler.cs" />
+    <Compile Include="WeiSha.Data\FastInvokeHandler.cs" />
+    <Compile Include="WeiSha.Data\FastPropertyGetHandler.cs" />
+    <Compile Include="WeiSha.Data\FastPropertySetHandler.cs" />
+    <Compile Include="WeiSha.Data\Field.cs" />
+    <Compile Include="WeiSha.Data\FieldValue.cs" />
+    <Compile Include="WeiSha.Data\FieldValueCollection.cs" />
+    <Compile Include="WeiSha.Data\FillRelation.cs" />
+    <Compile Include="WeiSha.Data\FromSection.cs" />
+    <Compile Include="WeiSha.Data\Gateway.cs" />
+    <Compile Include="WeiSha.Data\GroupByClip.cs" />
+    <Compile Include="WeiSha.Data\IArrayList.cs" />
+    <Compile Include="WeiSha.Data\IDataPage.cs" />
+    <Compile Include="WeiSha.Data\IDataSource.cs" />
+    <Compile Include="WeiSha.Data\IDbBatch.cs" />
+    <Compile Include="WeiSha.Data\IDbProcess.cs" />
+    <Compile Include="WeiSha.Data\IDbProvider.cs" />
+    <Compile Include="WeiSha.Data\IDbSession.cs" />
+    <Compile Include="WeiSha.Data\IDbTrans.cs" />
+    <Compile Include="WeiSha.Data\IDeleteCreator.cs" />
+    <Compile Include="WeiSha.Data\IEntityBase.cs" />
+    <Compile Include="WeiSha.Data\IEntityInfo.cs" />
+    <Compile Include="WeiSha.Data\IFieldFilter.cs" />
+    <Compile Include="WeiSha.Data\IInsertCreator.cs" />
+    <Compile Include="WeiSha.Data\IListConvert.cs" />
+    <Compile Include="WeiSha.Data\IncludeField.cs" />
+    <Compile Include="WeiSha.Data\InsertCreator.cs" />
+    <Compile Include="WeiSha.Data\InvalidValue.cs" />
+    <Compile Include="WeiSha.Data\IPageQuery.cs" />
+    <Compile Include="WeiSha.Data\IPageSection.cs" />
+    <Compile Include="WeiSha.Data\IPaging.cs" />
+    <Compile Include="WeiSha.Data\IProcSection.cs" />
+    <Compile Include="WeiSha.Data\IProvider.cs" />
+    <Compile Include="WeiSha.Data\IQuery.cs" />
+    <Compile Include="WeiSha.Data\IQueryCreator.cs" />
+    <Compile Include="WeiSha.Data\IQuerySection.cs" />
+    <Compile Include="WeiSha.Data\IRepository.cs" />
+    <Compile Include="WeiSha.Data\IRowReader.cs" />
+    <Compile Include="WeiSha.Data\ISourceList.cs" />
+    <Compile Include="WeiSha.Data\ISourceReader.cs" />
+    <Compile Include="WeiSha.Data\ISourceTable.cs" />
+    <Compile Include="WeiSha.Data\ISqlSection.cs" />
+    <Compile Include="WeiSha.Data\ITable.cs" />
+    <Compile Include="WeiSha.Data\ITableCreator.cs" />
+    <Compile Include="WeiSha.Data\ITableRelation.cs" />
+    <Compile Include="WeiSha.Data\IUpdateCreator.cs" />
+    <Compile Include="WeiSha.Data\IUserQuery.cs" />
+    <Compile Include="WeiSha.Data\IValidator.cs" />
+    <Compile Include="WeiSha.Data\IWhereCreator.cs" />
+    <Compile Include="WeiSha.Data\JoinType.cs" />
+    <Compile Include="WeiSha.Data\OrderByClip.cs" />
+    <Compile Include="WeiSha.Data\PageSection.cs" />
+    <Compile Include="WeiSha.Data\ProcSection.cs" />
+    <Compile Include="WeiSha.Data\QueryCreator.cs" />
+    <Compile Include="WeiSha.Data\QueryPage.cs" />
+    <Compile Include="WeiSha.Data\QuerySection.cs" />
+    <Compile Include="WeiSha.Data\Repository.cs" />
+    <Compile Include="WeiSha.Data\ReturnValue.cs" />
+    <Compile Include="WeiSha.Data\RuleException.cs" />
+    <Compile Include="WeiSha.Data\SNDataException.cs" />
+    <Compile Include="WeiSha.Data\SortComparer.cs" />
+    <Compile Include="WeiSha.Data\SortProperty.cs" />
+    <Compile Include="WeiSha.Data\SourceList.cs" />
+    <Compile Include="WeiSha.Data\SourceReader.cs" />
+    <Compile Include="WeiSha.Data\SourceRow.cs" />
+    <Compile Include="WeiSha.Data\SourceTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WeiSha.Data\SQLParameter.cs" />
+    <Compile Include="WeiSha.Data\SqlSection.cs" />
+    <Compile Include="WeiSha.Data\Table.cs" />
+    <Compile Include="WeiSha.Data\TableCreator.cs" />
+    <Compile Include="WeiSha.Data\TableEntity.cs" />
+    <Compile Include="WeiSha.Data\TableJoin.cs" />
+    <Compile Include="WeiSha.Data\TableRelation.cs" />
+    <Compile Include="WeiSha.Data\TopQuery.cs" />
+    <Compile Include="WeiSha.Data\TypeExtensions.cs" />
+    <Compile Include="WeiSha.Data\UnionItem.cs" />
+    <Compile Include="WeiSha.Data\UnionQuery.cs" />
+    <Compile Include="WeiSha.Data\UpdateCreator.cs" />
+    <Compile Include="WeiSha.Data\ValidateResult.cs" />
+    <Compile Include="WeiSha.Data\Validator.cs" />
+    <Compile Include="WeiSha.Data\WhereClip.cs" />
+    <Compile Include="WeiSha.Data\WhereCreator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{5A3A6656-2DC8-48AC-B33A-2A73CA83CE23}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

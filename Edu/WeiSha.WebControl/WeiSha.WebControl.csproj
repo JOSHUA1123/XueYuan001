@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FB2D74BC-5742-4F98-8AB0-D66A85DB9CF9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WeiSha.WebControl</RootNamespace>
+    <AssemblyName>WeiSha.WebControl</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Button.cs" />
+    <Compile Include="CheckTemplate.cs" />
+    <Compile Include="CloseButton.cs" />
+    <Compile Include="CloseRefreshButton.cs" />
+    <Compile Include="ComboBox.cs" />
+    <Compile Include="DeleteButton.cs" />
+    <Compile Include="DropDownTree.cs" />
+    <Compile Include="EnterButton.cs" />
+    <Compile Include="FileUpload.cs" />
+    <Compile Include="GridView.cs" />
+    <Compile Include="ImgButton.cs" />
+    <Compile Include="ListBoxTree.cs" />
+    <Compile Include="MenuTree.cs" />
+    <Compile Include="NextButton.cs" />
+    <Compile Include="Panel.cs" />
+    <Compile Include="PrevButton.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RowDelete.cs" />
+    <Compile Include="RowEdit.cs" />
+    <Compile Include="RowPrint.cs" />
+    <Compile Include="RowRecover.cs" />
+    <Compile Include="RowVerify.cs" />
+    <Compile Include="RowView.cs" />
+    <Compile Include="StateButton.cs" />
+    <Compile Include="StateShow.cs" />
+    <Compile Include="StateUse.cs" />
+    <Compile Include="SubmitButton.cs" />
+    <Compile Include="Tree\DataTableTree.cs" />
+    <Compile Include="Tree\GeneralProperty.cs" />
+    <Compile Include="Tree\Ico.cs" />
+    <Compile Include="Tree\MenuNode.cs" />
+    <Compile Include="Tree\ObjectArrayToDataTable.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{5a3a6656-2dc8-48ac-b33a-2a73ca83ce23}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

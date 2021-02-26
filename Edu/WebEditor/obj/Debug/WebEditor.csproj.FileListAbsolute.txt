@@ -1,0 +1,10 @@
+G:\XueYuan\WebEditor\bin\Debug\WebEditor.dll
+G:\XueYuan\WebEditor\bin\Debug\WebEditor.pdb
+G:\XueYuan\WebEditor\obj\Debug\WebEditor.dll
+G:\XueYuan\WebEditor\obj\Debug\WebEditor.pdb
+G:\XueYuan\WebEditor\obj\Debug\WebEditor.csprojAssemblyReference.cache
+G:\XueYuan\Edu\WebEditor\bin\Debug\WebEditor.dll
+G:\XueYuan\Edu\WebEditor\bin\Debug\WebEditor.pdb
+G:\XueYuan\Edu\WebEditor\obj\Debug\WebEditor.dll
+G:\XueYuan\Edu\WebEditor\obj\Debug\WebEditor.pdb
+G:\XueYuan\Edu\WebEditor\obj\Debug\WebEditor.csprojResolveAssemblyReference.cache

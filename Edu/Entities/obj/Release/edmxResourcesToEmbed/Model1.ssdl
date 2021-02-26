@@ -1,0 +1,2409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="examweishaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Accessory">
+    <Key>
+      <PropertyRef Name="As_Id" />
+    </Key>
+    <Property Name="As_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="As_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="As_FileName" Type="nvarchar" MaxLength="3000" />
+    <Property Name="As_Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="As_CrtTime" Type="datetime" Nullable="false" />
+    <Property Name="As_Size" Type="int" Nullable="false" />
+    <Property Name="As_Uid" Type="nvarchar" MaxLength="64" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="As_Width" Type="int" Nullable="false" />
+    <Property Name="As_Height" Type="int" Nullable="false" />
+    <Property Name="As_Extension" Type="nvarchar" MaxLength="255" />
+    <Property Name="As_Duration" Type="int" Nullable="false" />
+    <Property Name="As_IsOuter" Type="bit" Nullable="false" />
+    <Property Name="As_IsOther" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Accounts">
+    <Key>
+      <PropertyRef Name="Ac_ID" />
+    </Key>
+    <Property Name="Ac_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ac_PID" Type="int" />
+    <Property Name="Ac_AccName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ac_Pw" Type="nvarchar" MaxLength="100" />
+    <Property Name="Ac_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ac_Pinyin" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ac_IDCardNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ac_Signature" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ac_Age" Type="int" />
+    <Property Name="Ac_Sex" Type="int" />
+    <Property Name="Ac_Photo" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ac_Money" Type="money" />
+    <Property Name="Ac_Point" Type="int" />
+    <Property Name="Ac_Coupon" Type="int" />
+    <Property Name="Ac_Birthday" Type="datetime" />
+    <Property Name="Ac_IsUse" Type="bit" />
+    <Property Name="Ac_IsPass" Type="bit" />
+    <Property Name="Ac_IsTeacher" Type="bit" />
+    <Property Name="Ac_Qus" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ac_Ans" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ac_RegTime" Type="datetime" />
+    <Property Name="Ac_OutTime" Type="datetime" />
+    <Property Name="Ac_LastTime" Type="datetime" />
+    <Property Name="Ac_LastIP" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ac_Tel" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ac_IsOpenTel" Type="bit" />
+    <Property Name="Ac_MobiTel1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ac_MobiTel2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ac_IsOpenMobile" Type="bit" />
+    <Property Name="Ac_Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ac_Qq" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ac_Weixin" Type="nvarchar" MaxLength="100" />
+    <Property Name="Ac_CheckUID" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ac_UID" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_ID" Type="int" />
+    <Property Name="Ac_Zip" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ac_LinkMan" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ac_LinkManPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ac_Intro" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Ac_Major" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ac_Education" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ac_Native" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ac_Nation" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ac_CodeNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ac_Address" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ac_AddrContact" Type="nvarchar" MaxLength="255" />
+    <Property Name="Dep_Id" Type="int" />
+    <Property Name="Sts_ID" Type="int" />
+    <Property Name="Sts_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ac_CurrCourse" Type="int" />
+    <Property Name="Ac_PointAmount" Type="int" />
+    <Property Name="Ac_School" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ac_QqOpenID" Type="nvarchar" MaxLength="100" />
+    <Property Name="Ac_WeixinOpenID" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="AddressList">
+    <Key>
+      <PropertyRef Name="Adl_Id" />
+    </Key>
+    <Property Name="Adl_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ads_Id" Type="int" Nullable="false" />
+    <Property Name="Ads_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Adl_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Adl_Sex" Type="int" Nullable="false" />
+    <Property Name="Adl_Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="Adl_Tel" Type="nvarchar" MaxLength="50" />
+    <Property Name="Adl_CoTel" Type="nvarchar" MaxLength="50" />
+    <Property Name="Adl_MobileTel" Type="nvarchar" MaxLength="50" />
+    <Property Name="Adl_Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Adl_QQ" Type="nvarchar" MaxLength="50" />
+    <Property Name="Adl_Msn" Type="nvarchar" MaxLength="50" />
+    <Property Name="Adl_Blog" Type="nvarchar" MaxLength="255" />
+    <Property Name="Adl_Company" Type="nvarchar" MaxLength="255" />
+    <Property Name="Adl_Address" Type="nvarchar" MaxLength="255" />
+    <Property Name="Adl_Zip" Type="nvarchar" MaxLength="50" />
+    <Property Name="Adl_Birthday" Type="datetime" Nullable="false" />
+    <Property Name="Adl_Like" Type="nvarchar" MaxLength="255" />
+    <Property Name="Adl_Intro" Type="nvarchar" MaxLength="255" />
+    <Property Name="Acc_Id" Type="int" Nullable="false" />
+    <Property Name="Adl_Post" Type="nvarchar" MaxLength="255" />
+    <Property Name="Adl_Political" Type="nvarchar" MaxLength="255" />
+    <Property Name="Adl_State" Type="int" Nullable="false" />
+    <Property Name="Adl_CrtTime" Type="datetime" Nullable="false" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="AddressSort">
+    <Key>
+      <PropertyRef Name="Ads_Id" />
+    </Key>
+    <Property Name="Ads_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ads_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ads_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Ads_CrtTime" Type="datetime" />
+    <Property Name="Ads_Tax" Type="int" Nullable="false" />
+    <Property Name="Acc_Id" Type="int" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Article">
+    <Key>
+      <PropertyRef Name="Art_Id" />
+    </Key>
+    <Property Name="Art_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Col_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Col_Id" Type="int" Nullable="false" />
+    <Property Name="Art_Title" Type="nvarchar" MaxLength="255" />
+    <Property Name="Art_TitleAbbr" Type="nvarchar" MaxLength="50" />
+    <Property Name="Art_TitleFull" Type="nvarchar" MaxLength="255" />
+    <Property Name="Art_TitleSub" Type="nvarchar" MaxLength="255" />
+    <Property Name="Art_Color" Type="nvarchar" MaxLength="50" />
+    <Property Name="Art_Font" Type="nvarchar" MaxLength="50" />
+    <Property Name="Art_IsError" Type="bit" Nullable="false" />
+    <Property Name="Art_ErrInfo" Type="nvarchar" MaxLength="255" />
+    <Property Name="Art_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Art_IsShow" Type="bit" Nullable="false" />
+    <Property Name="Art_IsImg" Type="bit" Nullable="false" />
+    <Property Name="Art_IsHot" Type="bit" Nullable="false" />
+    <Property Name="Art_IsTop" Type="bit" Nullable="false" />
+    <Property Name="Art_IsRec" Type="bit" Nullable="false" />
+    <Property Name="Art_IsDel" Type="bit" Nullable="false" />
+    <Property Name="Art_IsVerify" Type="bit" Nullable="false" />
+    <Property Name="Art_VerifyMan" Type="nvarchar" MaxLength="50" />
+    <Property Name="Art_IsOut" Type="bit" Nullable="false" />
+    <Property Name="Art_OutUrl" Type="nvarchar" MaxLength="255" />
+    <Property Name="Art_Keywords" Type="nvarchar" MaxLength="255" />
+    <Property Name="Art_Descr" Type="nvarchar" MaxLength="255" />
+    <Property Name="Art_Author" Type="nvarchar" MaxLength="50" />
+    <Property Name="Acc_Id" Type="int" Nullable="false" />
+    <Property Name="Acc_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Art_Source" Type="nvarchar" MaxLength="100" />
+    <Property Name="Art_Intro" Type="nvarchar(max)" />
+    <Property Name="Art_Details" Type="nvarchar(max)" />
+    <Property Name="Art_Endnote" Type="nvarchar(max)" />
+    <Property Name="Art_CrtTime" Type="datetime" Nullable="false" />
+    <Property Name="Art_LastTime" Type="datetime" Nullable="false" />
+    <Property Name="Art_VerifyTime" Type="datetime" Nullable="false" />
+    <Property Name="Art_Number" Type="int" Nullable="false" />
+    <Property Name="Art_IsNote" Type="bit" Nullable="false" />
+    <Property Name="Art_Logo" Type="nvarchar" MaxLength="255" />
+    <Property Name="Art_IsStatic" Type="bit" Nullable="false" />
+    <Property Name="Art_PushTime" Type="datetime" Nullable="false" />
+    <Property Name="Art_Label" Type="nvarchar" MaxLength="255" />
+    <Property Name="Art_Uid" Type="nvarchar" MaxLength="64" />
+    <Property Name="OtherData" Type="nvarchar(max)" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Columns">
+    <Key>
+      <PropertyRef Name="Col_ID" />
+    </Key>
+    <Property Name="Col_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Col_PID" Type="int" Nullable="false" />
+    <Property Name="Col_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Col_ByName" Type="nvarchar" MaxLength="255" />
+    <Property Name="Col_Title" Type="nvarchar" MaxLength="255" />
+    <Property Name="Col_Keywords" Type="nvarchar" MaxLength="255" />
+    <Property Name="Col_Descr" Type="nvarchar" MaxLength="255" />
+    <Property Name="Col_Intro" Type="ntext" />
+    <Property Name="Col_Type" Type="nvarchar" MaxLength="255" />
+    <Property Name="Col_Tax" Type="int" Nullable="false" />
+    <Property Name="Col_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Col_IsNote" Type="bit" Nullable="false" />
+    <Property Name="Col_CrtTime" Type="datetime" Nullable="false" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="CouponAccount">
+    <Key>
+      <PropertyRef Name="Ca_ID" />
+    </Key>
+    <Property Name="Ca_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ac_ID" Type="int" Nullable="false" />
+    <Property Name="Ca_Total" Type="int" Nullable="false" />
+    <Property Name="Ca_TotalAmount" Type="int" Nullable="false" />
+    <Property Name="Ca_Value" Type="int" Nullable="false" />
+    <Property Name="Ca_Source" Type="nvarchar" MaxLength="200" />
+    <Property Name="Ca_Type" Type="int" Nullable="false" />
+    <Property Name="Ca_Info" Type="nvarchar" MaxLength="500" />
+    <Property Name="Ca_Remark" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Ca_CrtTime" Type="datetime" Nullable="false" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Ca_Serial" Type="nvarchar" MaxLength="100" />
+    <Property Name="Ca_From" Type="int" Nullable="false" />
+    <Property Name="Rc_Code" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Course">
+    <Key>
+      <PropertyRef Name="Cou_ID" />
+    </Key>
+    <Property Name="Cou_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cou_Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Cou_Logo" Type="nvarchar" MaxLength="100" />
+    <Property Name="Cou_LogoSmall" Type="nvarchar" MaxLength="100" />
+    <Property Name="Cou_Tax" Type="int" Nullable="false" />
+    <Property Name="Cou_Intro" Type="nvarchar(max)" />
+    <Property Name="Cou_Target" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Cou_Content" Type="nvarchar(max)" />
+    <Property Name="Cou_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Cou_IsFree" Type="bit" Nullable="false" />
+    <Property Name="Cou_IsStudy" Type="bit" Nullable="false" />
+    <Property Name="Cou_StudentSum" Type="int" Nullable="false" />
+    <Property Name="Cou_Price" Type="int" Nullable="false" />
+    <Property Name="Cou_CrtTime" Type="datetime" Nullable="false" />
+    <Property Name="Cou_Score" Type="int" Nullable="false" />
+    <Property Name="Cou_ViewNum" Type="int" Nullable="false" />
+    <Property Name="Sbj_ID" Type="int" Nullable="false" />
+    <Property Name="Sbj_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Th_ID" Type="int" Nullable="false" />
+    <Property Name="Th_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Cou_PID" Type="int" Nullable="false" />
+    <Property Name="Cou_Level" Type="int" Nullable="false" />
+    <Property Name="Cou_XPath" Type="nvarchar" MaxLength="255" />
+    <Property Name="Cou_UID" Type="nvarchar" MaxLength="100" />
+    <Property Name="Cou_IsTry" Type="bit" Nullable="false" />
+    <Property Name="Cou_TryNum" Type="int" Nullable="false" />
+    <Property Name="Dep_Id" Type="int" Nullable="false" />
+    <Property Name="Dep_CnName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Cou_IsRec" Type="bit" Nullable="false" />
+    <Property Name="Cou_PriceUnit" Type="nvarchar" MaxLength="100" />
+    <Property Name="Cou_PriceSpan" Type="int" Nullable="false" />
+    <Property Name="Cou_IsLimitFree" Type="bit" Nullable="false" />
+    <Property Name="Cou_FreeStart" Type="datetime" Nullable="false" />
+    <Property Name="Cou_FreeEnd" Type="datetime" Nullable="false" />
+    <Property Name="Cou_ExistLive" Type="bit" Nullable="false" />
+    <Property Name="Cou_ExistQues" Type="bit" Nullable="false" />
+    <Property Name="Cou_ExistExam" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CoursePrice">
+    <Key>
+      <PropertyRef Name="CP_ID" />
+    </Key>
+    <Property Name="CP_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CP_Tax" Type="int" Nullable="false" />
+    <Property Name="CP_Price" Type="int" Nullable="false" />
+    <Property Name="CP_Span" Type="int" Nullable="false" />
+    <Property Name="CP_Unit" Type="nvarchar" MaxLength="100" />
+    <Property Name="CP_IsUse" Type="bit" Nullable="false" />
+    <Property Name="CP_Group" Type="nvarchar" MaxLength="100" />
+    <Property Name="Cou_ID" Type="int" Nullable="false" />
+    <Property Name="Cou_UID" Type="nvarchar" MaxLength="100" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="CP_Coupon" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DailyLog">
+    <Key>
+      <PropertyRef Name="Dlog_Id" />
+    </Key>
+    <Property Name="Dlog_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Dlog_Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="Dlog_Note" Type="ntext" />
+    <Property Name="Dlog_Plan" Type="ntext" />
+    <Property Name="Dlog_CrtTime" Type="datetime" />
+    <Property Name="Dlog_WrtTime" Type="datetime" />
+    <Property Name="Acc_Id" Type="int" />
+    <Property Name="Acc_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Depart">
+    <Key>
+      <PropertyRef Name="Dep_Id" />
+    </Key>
+    <Property Name="Dep_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Dep_CnName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Dep_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Dep_Tax" Type="int" Nullable="false" />
+    <Property Name="Dep_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Dep_IsShow" Type="bit" Nullable="false" />
+    <Property Name="Dep_IsAdmin" Type="bit" Nullable="false" />
+    <Property Name="Dep_PatId" Type="int" Nullable="false" />
+    <Property Name="Dep_Level" Type="int" Nullable="false" />
+    <Property Name="Dep_Func" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Dep_Phone" Type="nvarchar" MaxLength="255" />
+    <Property Name="Dep_Msn" Type="nvarchar" MaxLength="255" />
+    <Property Name="Dep_Fax" Type="nvarchar" MaxLength="255" />
+    <Property Name="Dep_Email" Type="nvarchar" MaxLength="255" />
+    <Property Name="Dep_WorkAddr" Type="nvarchar" MaxLength="255" />
+    <Property Name="Dep_CnAbbr" Type="nvarchar" MaxLength="50" />
+    <Property Name="Dep_EnAbbr" Type="nvarchar" MaxLength="50" />
+    <Property Name="Dep_EnName" Type="nvarchar" MaxLength="255" />
+    <Property Name="Dep_State" Type="bit" Nullable="false" />
+    <Property Name="Dep_Count" Type="int" Nullable="false" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Depart_Subject">
+    <Key>
+      <PropertyRef Name="DepSub_ID" />
+    </Key>
+    <Property Name="DepSub_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Dep_Id" Type="int" />
+    <Property Name="Sbj_ID" Type="int" />
+    <Property Name="Org_Id" Type="int" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Download">
+    <Key>
+      <PropertyRef Name="Dl_Id" />
+    </Key>
+    <Property Name="Dl_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Dl_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Dl_Intro" Type="ntext" />
+    <Property Name="Dl_Details" Type="ntext" />
+    <Property Name="Dl_Version" Type="nvarchar" MaxLength="50" />
+    <Property Name="Dl_FilePath" Type="nvarchar" MaxLength="255" />
+    <Property Name="Dl_Logo" Type="nvarchar" MaxLength="255" />
+    <Property Name="Dl_LogoSmall" Type="nvarchar" MaxLength="255" />
+    <Property Name="Dl_IsShow" Type="bit" Nullable="false" />
+    <Property Name="Dl_Keywords" Type="nvarchar" MaxLength="255" />
+    <Property Name="Dl_Descr" Type="nvarchar" MaxLength="255" />
+    <Property Name="Dl_IsRec" Type="bit" Nullable="false" />
+    <Property Name="Dl_IsTop" Type="bit" Nullable="false" />
+    <Property Name="Dl_IsHot" Type="bit" Nullable="false" />
+    <Property Name="Dl_IsDel" Type="bit" Nullable="false" />
+    <Property Name="Dl_CrtTime" Type="datetime" />
+    <Property Name="Dl_UpdateTime" Type="datetime" />
+    <Property Name="Dl_Size" Type="int" />
+    <Property Name="Dl_OS" Type="nvarchar" MaxLength="255" />
+    <Property Name="Dl_Author" Type="nvarchar" MaxLength="255" />
+    <Property Name="Dl_LookNumber" Type="int" />
+    <Property Name="Dl_DownNumber" Type="int" />
+    <Property Name="Col_Id" Type="int" />
+    <Property Name="Col_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Acc_Id" Type="int" />
+    <Property Name="Acc_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Dl_QrCode" Type="nvarchar" MaxLength="255" />
+    <Property Name="Dl_IsStatic" Type="bit" Nullable="false" />
+    <Property Name="Dl_PushTime" Type="datetime" />
+    <Property Name="Dl_Uid" Type="nvarchar" MaxLength="64" />
+    <Property Name="Dty_Id" Type="int" />
+    <Property Name="Dty_Type" Type="nvarchar" MaxLength="255" />
+    <Property Name="Dl_Label" Type="nvarchar" MaxLength="255" />
+    <Property Name="OtherData" Type="ntext" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="DownloadOS">
+    <Key>
+      <PropertyRef Name="Dos_Id" />
+    </Key>
+    <Property Name="Dos_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Dos_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Dos_Intro" Type="nvarchar" MaxLength="50" />
+    <Property Name="Dos_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Dos_Tax" Type="int" />
+    <Property Name="Org_Id" Type="int" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="DownloadType">
+    <Key>
+      <PropertyRef Name="Dty_Id" />
+    </Key>
+    <Property Name="Dty_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Dty_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Dty_Intro" Type="nvarchar" MaxLength="50" />
+    <Property Name="Dty_Details" Type="ntext" />
+    <Property Name="Dty_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Dty_Tax" Type="int" />
+    <Property Name="Org_Id" Type="int" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="EmpAcc_Group">
+    <Key>
+      <PropertyRef Name="Emgr_Id" />
+    </Key>
+    <Property Name="Emgr_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Acc_Id" Type="int" />
+    <Property Name="EGrp_Id" Type="int" />
+    <Property Name="Org_Id" Type="int" />
+  </EntityType>
+  <EntityType Name="EmpAccount">
+    <Key>
+      <PropertyRef Name="Acc_Id" />
+    </Key>
+    <Property Name="Acc_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Acc_AccName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Acc_Pw" Type="nvarchar" MaxLength="255" />
+    <Property Name="Acc_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Acc_NamePinyin" Type="nvarchar" MaxLength="255" />
+    <Property Name="Acc_IDCardNumber" Type="nvarchar" MaxLength="18" />
+    <Property Name="Acc_Signature" Type="nvarchar" MaxLength="255" />
+    <Property Name="Acc_Sex" Type="int" Nullable="false" />
+    <Property Name="Acc_Age" Type="int" Nullable="false" />
+    <Property Name="Acc_Birthday" Type="datetime" Nullable="false" />
+    <Property Name="Acc_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Acc_Email" Type="nvarchar" MaxLength="100" />
+    <Property Name="Acc_Qus" Type="nvarchar" MaxLength="255" />
+    <Property Name="Acc_Ans" Type="nvarchar" MaxLength="255" />
+    <Property Name="Acc_EmpCode" Type="nvarchar" MaxLength="255" />
+    <Property Name="Acc_RegTime" Type="datetime" Nullable="false" />
+    <Property Name="Acc_OutTime" Type="datetime" Nullable="false" />
+    <Property Name="Acc_IsAutoOut" Type="bit" Nullable="false" />
+    <Property Name="Acc_LastTime" Type="datetime" Nullable="false" />
+    <Property Name="Acc_Tel" Type="nvarchar" MaxLength="50" />
+    <Property Name="Acc_IsOpenTel" Type="bit" Nullable="false" />
+    <Property Name="Acc_MobileTel" Type="nvarchar" MaxLength="50" />
+    <Property Name="Acc_IsOpenMobile" Type="bit" Nullable="false" />
+    <Property Name="Acc_QQ" Type="nvarchar" MaxLength="50" />
+    <Property Name="Dep_Id" Type="int" Nullable="false" />
+    <Property Name="Dep_CnName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Posi_Id" Type="int" Nullable="false" />
+    <Property Name="Posi_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="EGrp_Id" Type="int" Nullable="false" />
+    <Property Name="Acc_Photo" Type="nvarchar" MaxLength="255" />
+    <Property Name="Acc_IsUseCard" Type="bit" Nullable="false" />
+    <Property Name="Acc_Weixin" Type="nvarchar" MaxLength="255" />
+    <Property Name="Title_Id" Type="int" Nullable="false" />
+    <Property Name="Title_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Acc_IsPartTime" Type="bit" Nullable="false" />
+    <Property Name="Team_ID" Type="int" Nullable="false" />
+    <Property Name="Team_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="EmpGroup">
+    <Key>
+      <PropertyRef Name="EGrp_Id" />
+    </Key>
+    <Property Name="EGrp_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EGrp_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="EGrp_IsUse" Type="bit" Nullable="false" />
+    <Property Name="EGrp_Tax" Type="int" Nullable="false" />
+    <Property Name="EGrp_Intro" Type="nvarchar" MaxLength="255" />
+    <Property Name="EGrp_IsSystem" Type="bit" Nullable="false" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="EmpInfo">
+    <Key>
+      <PropertyRef Name="Emp_Id" />
+    </Key>
+    <Property Name="Emp_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Acc_Id" Type="int" />
+    <Property Name="Org_Id" Type="int" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="EmpTitle">
+    <Key>
+      <PropertyRef Name="Title_Id" />
+    </Key>
+    <Property Name="Title_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Title_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Title_Tax" Type="int" />
+    <Property Name="Title_Intro" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ExamGroup">
+    <Key>
+      <PropertyRef Name="Eg_ID" />
+    </Key>
+    <Property Name="Eg_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Eg_Type" Type="int" />
+    <Property Name="Sts_ID" Type="int" Nullable="false" />
+    <Property Name="Exam_UID" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Examination">
+    <Key>
+      <PropertyRef Name="Exam_ID" />
+    </Key>
+    <Property Name="Exam_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Exam_Title" Type="nvarchar" MaxLength="255" />
+    <Property Name="Exam_CrtTime" Type="datetime" Nullable="false" />
+    <Property Name="Exam_Intro" Type="ntext" />
+    <Property Name="Exam_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Exam_IsTheme" Type="bit" Nullable="false" />
+    <Property Name="Exam_GroupType" Type="int" Nullable="false" />
+    <Property Name="Exam_Monitor" Type="nvarchar" MaxLength="255" />
+    <Property Name="Exam_Date" Type="datetime" Nullable="false" />
+    <Property Name="Exam_Span" Type="int" Nullable="false" />
+    <Property Name="Sbj_ID" Type="int" Nullable="false" />
+    <Property Name="Sbj_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Exam_UID" Type="nvarchar" MaxLength="255" />
+    <Property Name="Th_ID" Type="int" Nullable="false" />
+    <Property Name="Th_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Tp_Id" Type="int" Nullable="false" />
+    <Property Name="Exam_PassScore" Type="int" Nullable="false" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Exam_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Exam_Total" Type="int" Nullable="false" />
+    <Property Name="Exam_Tax" Type="int" Nullable="false" />
+    <Property Name="Exam_DateOver" Type="datetime" Nullable="false" />
+    <Property Name="Exam_DateType" Type="int" Nullable="false" />
+    <Property Name="Exam_IsToggle" Type="bit" Nullable="false" />
+    <Property Name="Exam_IsShowBtn" Type="bit" Nullable="false" />
+    <Property Name="Exam_IsRightClick" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ExamResults">
+    <Key>
+      <PropertyRef Name="Exr_ID" />
+    </Key>
+    <Property Name="Exr_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Exr_Score" Type="real" Nullable="false" />
+    <Property Name="Exr_ScoreFinal" Type="real" Nullable="false" />
+    <Property Name="Exr_Draw" Type="real" Nullable="false" />
+    <Property Name="Exr_Colligate" Type="real" Nullable="false" />
+    <Property Name="Exr_Results" Type="nvarchar(max)" />
+    <Property Name="Exr_CrtTime" Type="datetime" Nullable="false" />
+    <Property Name="Exr_IP" Type="nvarchar" MaxLength="255" />
+    <Property Name="Exr_Mac" Type="nvarchar" MaxLength="255" />
+    <Property Name="Exr_IsSubmit" Type="bit" Nullable="false" />
+    <Property Name="Exam_ID" Type="int" Nullable="false" />
+    <Property Name="Exam_UID" Type="nvarchar" MaxLength="255" />
+    <Property Name="Exam_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Sbj_ID" Type="int" Nullable="false" />
+    <Property Name="Sbj_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Tp_Id" Type="int" Nullable="false" />
+    <Property Name="Ac_ID" Type="int" Nullable="false" />
+    <Property Name="Ac_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Dep_Id" Type="int" Nullable="false" />
+    <Property Name="Team_ID" Type="int" Nullable="false" />
+    <Property Name="Exam_Title" Type="nvarchar" MaxLength="255" />
+    <Property Name="Exr_SubmitTime" Type="datetime" Nullable="false" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="varchar" MaxLength="255" />
+    <Property Name="Sts_ID" Type="int" Nullable="false" />
+    <Property Name="Ac_Sex" Type="int" Nullable="false" />
+    <Property Name="Ac_IDCardNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Exr_IsCalc" Type="bit" Nullable="false" />
+    <Property Name="Exr_OverTime" Type="datetime" Nullable="false" />
+    <Property Name="Exr_CalcTime" Type="datetime" Nullable="false" />
+    <Property Name="Exr_LastTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ExamResultsTemp">
+    <Key>
+      <PropertyRef Name="Exr_ID" />
+    </Key>
+    <Property Name="Exr_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Exr_Score" Type="real" />
+    <Property Name="Exr_Results" Type="ntext" />
+    <Property Name="Exr_CrtTime" Type="datetime" />
+    <Property Name="Exr_IP" Type="nvarchar" MaxLength="255" />
+    <Property Name="Exr_Mac" Type="nvarchar" MaxLength="255" />
+    <Property Name="Exr_IsSubmit" Type="bit" Nullable="false" />
+    <Property Name="Exam_ID" Type="int" />
+    <Property Name="Sbj_ID" Type="int" />
+    <Property Name="Tp_Id" Type="int" />
+    <Property Name="Acc_Id" Type="int" />
+  </EntityType>
+  <EntityType Name="Forum">
+    <Key>
+      <PropertyRef Name="Fm_ID" />
+    </Key>
+    <Property Name="Fm_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Fm_Title" Type="nvarchar" MaxLength="255" />
+    <Property Name="Fm_IsTheme" Type="bit" Nullable="false" />
+    <Property Name="Fm_Content" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Fm_PID" Type="int" Nullable="false" />
+    <Property Name="Fm_UID" Type="nvarchar" MaxLength="255" />
+    <Property Name="Fm_At" Type="int" Nullable="false" />
+    <Property Name="Fm_CrtTime" Type="datetime" Nullable="false" />
+    <Property Name="Fm_LastTime" Type="datetime" />
+    <Property Name="Fm_IP" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fm_ViewNumber" Type="int" Nullable="false" />
+    <Property Name="Fm_ReplyNumber" Type="int" Nullable="false" />
+    <Property Name="Fm_IsDel" Type="bit" Nullable="false" />
+    <Property Name="Fm_IsTop" Type="bit" Nullable="false" />
+    <Property Name="Fm_IsRec" Type="bit" Nullable="false" />
+    <Property Name="Ac_ID" Type="int" />
+    <Property Name="Ac_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Th_ID" Type="int" />
+    <Property Name="Th_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Org_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="FuncPoint">
+    <Key>
+      <PropertyRef Name="FPI_Id" />
+    </Key>
+    <Property Name="FPI_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FPI_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FPI_IsUse" Type="bit" Nullable="false" />
+    <Property Name="FPI_IsShow" Type="bit" Nullable="false" />
+    <Property Name="Org_Id" Type="int" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Guide">
+    <Key>
+      <PropertyRef Name="Gu_Id" />
+    </Key>
+    <Property Name="Gu_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Gc_Title" Type="nvarchar" MaxLength="255" />
+    <Property Name="Gc_ID" Type="int" />
+    <Property Name="Cou_ID" Type="int" Nullable="false" />
+    <Property Name="Cou_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Gu_Title" Type="nvarchar" MaxLength="255" />
+    <Property Name="Gu_TitleAbbr" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gu_TitleFull" Type="nvarchar" MaxLength="255" />
+    <Property Name="Gu_TitleSub" Type="nvarchar" MaxLength="255" />
+    <Property Name="Gu_Color" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gu_Font" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gu_IsError" Type="bit" Nullable="false" />
+    <Property Name="Gu_ErrInfo" Type="nvarchar" MaxLength="255" />
+    <Property Name="Gu_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Gu_IsShow" Type="bit" Nullable="false" />
+    <Property Name="Gu_IsImg" Type="bit" Nullable="false" />
+    <Property Name="Gu_IsHot" Type="bit" Nullable="false" />
+    <Property Name="Gu_IsTop" Type="bit" Nullable="false" />
+    <Property Name="Gu_IsRec" Type="bit" Nullable="false" />
+    <Property Name="Gu_IsDel" Type="bit" Nullable="false" />
+    <Property Name="Gu_IsVerify" Type="bit" Nullable="false" />
+    <Property Name="Gu_VerifyMan" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gu_IsOut" Type="bit" Nullable="false" />
+    <Property Name="Gu_OutUrl" Type="nvarchar" MaxLength="255" />
+    <Property Name="Gu_Keywords" Type="nvarchar" MaxLength="255" />
+    <Property Name="Gu_Descr" Type="nvarchar" MaxLength="255" />
+    <Property Name="Gu_Author" Type="nvarchar" MaxLength="50" />
+    <Property Name="Acc_Id" Type="int" />
+    <Property Name="Acc_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Gu_Source" Type="nvarchar" MaxLength="100" />
+    <Property Name="Gu_Intro" Type="ntext" />
+    <Property Name="Gu_Details" Type="ntext" />
+    <Property Name="Gu_Endnote" Type="ntext" />
+    <Property Name="Gu_CrtTime" Type="datetime" />
+    <Property Name="Gu_LastTime" Type="datetime" />
+    <Property Name="Gu_VerifyTime" Type="datetime" />
+    <Property Name="Gu_Number" Type="int" Nullable="false" />
+    <Property Name="Gu_IsNote" Type="bit" Nullable="false" />
+    <Property Name="Gu_Logo" Type="nvarchar" MaxLength="255" />
+    <Property Name="Gu_IsStatic" Type="bit" Nullable="false" />
+    <Property Name="Gu_PushTime" Type="datetime" />
+    <Property Name="Gu_Label" Type="nvarchar" MaxLength="255" />
+    <Property Name="Gu_Uid" Type="nvarchar" MaxLength="64" />
+    <Property Name="OtherData" Type="ntext" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="GuideColumns">
+    <Key>
+      <PropertyRef Name="Gc_ID" />
+    </Key>
+    <Property Name="Gc_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Gc_PID" Type="int" Nullable="false" />
+    <Property Name="Cou_ID" Type="int" Nullable="false" />
+    <Property Name="Cou_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Gc_ByName" Type="nvarchar" MaxLength="255" />
+    <Property Name="Gc_Title" Type="nvarchar" MaxLength="255" />
+    <Property Name="Gc_Keywords" Type="nvarchar" MaxLength="255" />
+    <Property Name="Gc_Descr" Type="nvarchar" MaxLength="255" />
+    <Property Name="Gc_Intro" Type="ntext" />
+    <Property Name="Gc_Type" Type="nvarchar" MaxLength="255" />
+    <Property Name="Gc_Tax" Type="int" Nullable="false" />
+    <Property Name="Gc_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Gc_IsNote" Type="bit" Nullable="false" />
+    <Property Name="Gc_CrtTime" Type="datetime" Nullable="false" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="InnerEmail">
+    <Key>
+      <PropertyRef Name="Ine_Id" />
+    </Key>
+    <Property Name="Ine_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ine_Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Ine_Context" Type="ntext" />
+    <Property Name="Acc_Id" Type="int" />
+    <Property Name="Acc_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ine_CrtTime" Type="datetime" />
+    <Property Name="Ine_ToTime" Type="datetime" />
+    <Property Name="Ine_ReadTime" Type="datetime" />
+    <Property Name="Ine_State" Type="int" />
+    <Property Name="Ine_ToName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ine_ToId" Type="int" />
+    <Property Name="Ine_OfBox" Type="int" />
+    <Property Name="Ine_ToAllId" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ine_ToAllName" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ine_OwnerId" Type="int" />
+    <Property Name="Ine_Del" Type="bit" Nullable="false" />
+    <Property Name="Ine_UniqueId" Type="nvarchar" MaxLength="64" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="InternalLink">
+    <Key>
+      <PropertyRef Name="IL_ID" />
+    </Key>
+    <Property Name="IL_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IL_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="IL_Url" Type="nvarchar" MaxLength="255" />
+    <Property Name="IL_Title" Type="nvarchar" MaxLength="255" />
+    <Property Name="IL_Target" Type="nvarchar" MaxLength="255" />
+    <Property Name="IL_IsUse" Type="bit" Nullable="false" />
+    <Property Name="IL_CrtTime" Type="datetime" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Knowledge">
+    <Key>
+      <PropertyRef Name="Kn_ID" />
+    </Key>
+    <Property Name="Kn_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Kns_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Kns_ID" Type="int" />
+    <Property Name="Kn_Title" Type="nvarchar" MaxLength="255" />
+    <Property Name="Kn_TitleFull" Type="nvarchar" MaxLength="255" />
+    <Property Name="Kn_TitleSub" Type="nvarchar" MaxLength="255" />
+    <Property Name="Kn_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Kn_IsTop" Type="bit" Nullable="false" />
+    <Property Name="Kn_IsRec" Type="bit" Nullable="false" />
+    <Property Name="Kn_IsHot" Type="bit" Nullable="false" />
+    <Property Name="Kn_IsDel" Type="bit" Nullable="false" />
+    <Property Name="Kn_Keywords" Type="nvarchar" MaxLength="255" />
+    <Property Name="Kn_Descr" Type="nvarchar" MaxLength="255" />
+    <Property Name="Kn_Author" Type="nvarchar" MaxLength="50" />
+    <Property Name="Th_ID" Type="int" Nullable="false" />
+    <Property Name="Th_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Kn_Source" Type="nvarchar" MaxLength="100" />
+    <Property Name="Kn_Intro" Type="ntext" />
+    <Property Name="Kn_Details" Type="ntext" />
+    <Property Name="Kn_CrtTime" Type="datetime" />
+    <Property Name="Kn_LastTime" Type="datetime" />
+    <Property Name="Kn_Number" Type="int" Nullable="false" />
+    <Property Name="Kn_IsNote" Type="bit" Nullable="false" />
+    <Property Name="Kn_Logo" Type="nvarchar" MaxLength="255" />
+    <Property Name="Kn_Label" Type="nvarchar" MaxLength="255" />
+    <Property Name="Kn_Uid" Type="nvarchar" MaxLength="64" />
+    <Property Name="OtherData" Type="ntext" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Cou_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KnowledgeSort">
+    <Key>
+      <PropertyRef Name="Kns_ID" />
+    </Key>
+    <Property Name="Kns_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Kns_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Kns_ByName" Type="nvarchar" MaxLength="255" />
+    <Property Name="Kns_PID" Type="int" Nullable="false" />
+    <Property Name="Kns_Tax" Type="int" Nullable="false" />
+    <Property Name="Kns_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Kns_Type" Type="nvarchar" MaxLength="255" />
+    <Property Name="Kns_Intro" Type="nvarchar" MaxLength="255" />
+    <Property Name="Kns_CrtTime" Type="datetime" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Cou_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LearningCard">
+    <Key>
+      <PropertyRef Name="Lc_ID" />
+    </Key>
+    <Property Name="Lc_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Lc_Code" Type="nvarchar" MaxLength="100" />
+    <Property Name="Lc_Pw" Type="nvarchar" MaxLength="50" />
+    <Property Name="Lc_Price" Type="real" Nullable="false" />
+    <Property Name="Lc_Coupon" Type="int" Nullable="false" />
+    <Property Name="Lc_CrtTime" Type="datetime" Nullable="false" />
+    <Property Name="Lc_UsedTime" Type="datetime" Nullable="false" />
+    <Property Name="Lc_IsEnable" Type="bit" Nullable="false" />
+    <Property Name="Lc_IsUsed" Type="bit" Nullable="false" />
+    <Property Name="Lcs_ID" Type="int" Nullable="false" />
+    <Property Name="Ac_ID" Type="int" Nullable="false" />
+    <Property Name="Ac_AccName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Lc_LimitStart" Type="datetime" Nullable="false" />
+    <Property Name="Lc_LimitEnd" Type="datetime" Nullable="false" />
+    <Property Name="Lc_State" Type="int" Nullable="false" />
+    <Property Name="Lc_QrcodeBase64" Type="nvarchar(max)" />
+    <Property Name="Lc_Span" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LearningCardSet">
+    <Key>
+      <PropertyRef Name="Lcs_ID" />
+    </Key>
+    <Property Name="Lcs_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Lcs_RelatedCourses" Type="nvarchar(max)" />
+    <Property Name="Lcs_CoursesCount" Type="int" Nullable="false" />
+    <Property Name="Lcs_Count" Type="int" Nullable="false" />
+    <Property Name="Lcs_MaxCount" Type="int" Nullable="false" />
+    <Property Name="Lcs_BuildCount" Type="int" Nullable="false" />
+    <Property Name="Lcs_IsFixed" Type="bit" Nullable="false" />
+    <Property Name="Lcs_Price" Type="real" Nullable="false" />
+    <Property Name="Lcs_Coupon" Type="int" Nullable="false" />
+    <Property Name="Lcs_Span" Type="int" Nullable="false" />
+    <Property Name="Lcs_Unit" Type="nvarchar" MaxLength="50" />
+    <Property Name="Lcs_CrtTime" Type="datetime" Nullable="false" />
+    <Property Name="Lcs_Theme" Type="nvarchar" MaxLength="500" />
+    <Property Name="Lcs_Intro" Type="nvarchar" MaxLength="500" />
+    <Property Name="Lsc_UsedCount" Type="int" Nullable="false" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Lcs_LimitStart" Type="datetime" Nullable="false" />
+    <Property Name="Lcs_LimitEnd" Type="datetime" Nullable="false" />
+    <Property Name="Lcs_IsEnable" Type="bit" Nullable="false" />
+    <Property Name="Lcs_CodeLength" Type="int" Nullable="false" />
+    <Property Name="Lcs_PwLength" Type="int" Nullable="false" />
+    <Property Name="Lcs_SecretKey" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="LimitDomain">
+    <Key>
+      <PropertyRef Name="LD_ID" />
+    </Key>
+    <Property Name="LD_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LD_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="LD_IsUse" Type="bit" Nullable="false" />
+    <Property Name="LD_Intro" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Links">
+    <Key>
+      <PropertyRef Name="Lk_Id" />
+    </Key>
+    <Property Name="Lk_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ls_Id" Type="int" />
+    <Property Name="Ls_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Lk_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Lk_Url" Type="nvarchar" MaxLength="255" />
+    <Property Name="Lk_Tax" Type="int" />
+    <Property Name="Lk_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Lk_Logo" Type="nvarchar" MaxLength="255" />
+    <Property Name="Lk_LogoSmall" Type="nvarchar" MaxLength="255" />
+    <Property Name="Lk_IsShow" Type="bit" Nullable="false" />
+    <Property Name="Lk_Tootip" Type="nvarchar" MaxLength="255" />
+    <Property Name="Lk_Email" Type="nvarchar" MaxLength="255" />
+    <Property Name="Lk_IsApply" Type="bit" Nullable="false" />
+    <Property Name="Lk_IsVerify" Type="bit" Nullable="false" />
+    <Property Name="Lk_SiteMaster" Type="nvarchar" MaxLength="255" />
+    <Property Name="Lk_QQ" Type="nvarchar" MaxLength="255" />
+    <Property Name="Lk_Mobile" Type="nvarchar" MaxLength="255" />
+    <Property Name="Lk_Explain" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="LinksSort">
+    <Key>
+      <PropertyRef Name="Ls_Id" />
+    </Key>
+    <Property Name="Ls_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ls_PatId" Type="int" />
+    <Property Name="Ls_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ls_Tax" Type="int" />
+    <Property Name="Ls_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Ls_Logo" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ls_IsShow" Type="bit" Nullable="false" />
+    <Property Name="Ls_Tootip" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ls_IsImg" Type="bit" Nullable="false" />
+    <Property Name="Ls_IsText" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LogForStudentOnline">
+    <Key>
+      <PropertyRef Name="Lso_ID" />
+    </Key>
+    <Property Name="Lso_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Org_ID" Type="int" />
+    <Property Name="Ac_ID" Type="int" />
+    <Property Name="Ac_AccName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ac_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Lso_UID" Type="nvarchar" MaxLength="255" />
+    <Property Name="Lso_LoginDate" Type="datetime" />
+    <Property Name="Lso_LoginTime" Type="datetime" />
+    <Property Name="Lso_LastTime" Type="datetime" />
+    <Property Name="Lso_LogoutTime" Type="datetime" />
+    <Property Name="Lso_CrtTime" Type="datetime" />
+    <Property Name="Lso_OnlineTime" Type="int" />
+    <Property Name="Lso_BrowseTime" Type="int" />
+    <Property Name="Lso_IP" Type="nvarchar" MaxLength="50" />
+    <Property Name="Lso_Browser" Type="nvarchar" MaxLength="255" />
+    <Property Name="Lso_Platform" Type="nvarchar" MaxLength="255" />
+    <Property Name="Lso_OS" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="LogForStudentQuestions">
+    <Key>
+      <PropertyRef Name="Lsq_ID" />
+    </Key>
+    <Property Name="Lsq_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Org_ID" Type="int" />
+    <Property Name="Ac_ID" Type="int" />
+    <Property Name="Ac_AccName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Cou_ID" Type="int" />
+    <Property Name="Ol_ID" Type="int" />
+    <Property Name="Lsq_CrtTime" Type="datetime" />
+    <Property Name="Lsq_LastTime" Type="datetime" />
+    <Property Name="Qus_ID" Type="int" />
+    <Property Name="Lsq_Index" Type="int" />
+  </EntityType>
+  <EntityType Name="LogForStudentStudy">
+    <Key>
+      <PropertyRef Name="Lss_ID" />
+    </Key>
+    <Property Name="Lss_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Org_ID" Type="int" />
+    <Property Name="Ac_ID" Type="int" />
+    <Property Name="Ac_AccName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ac_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Cou_ID" Type="int" />
+    <Property Name="Ol_ID" Type="int" />
+    <Property Name="Lss_UID" Type="nvarchar" MaxLength="255" />
+    <Property Name="Lss_CrtTime" Type="datetime" />
+    <Property Name="Lss_PlayTime" Type="int" />
+    <Property Name="Lss_StudyTime" Type="int" />
+    <Property Name="Lss_Duration" Type="int" />
+    <Property Name="Lss_LastTime" Type="datetime" />
+    <Property Name="Lss_IP" Type="nvarchar" MaxLength="50" />
+    <Property Name="Lss_Browser" Type="nvarchar" MaxLength="255" />
+    <Property Name="Lss_Platform" Type="nvarchar" MaxLength="255" />
+    <Property Name="Lss_OS" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Logs">
+    <Key>
+      <PropertyRef Name="Log_Id" />
+    </Key>
+    <Property Name="Log_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Acc_Id" Type="int" />
+    <Property Name="Acc_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Log_Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="Log_Time" Type="datetime" />
+    <Property Name="Log_IP" Type="nvarchar" MaxLength="50" />
+    <Property Name="Log_OS" Type="nvarchar" MaxLength="50" />
+    <Property Name="Log_Browser" Type="nvarchar" MaxLength="50" />
+    <Property Name="Log_MenuName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Log_MenuId" Type="int" />
+    <Property Name="Log_FileName" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ManageMenu">
+    <Key>
+      <PropertyRef Name="MM_Id" />
+    </Key>
+    <Property Name="MM_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MM_Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="MM_Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="MM_Root" Type="int" Nullable="false" />
+    <Property Name="MM_Link" Type="nvarchar" MaxLength="255" />
+    <Property Name="MM_Marker" Type="nvarchar" MaxLength="255" />
+    <Property Name="MM_Tax" Type="int" Nullable="false" />
+    <Property Name="MM_PatId" Type="int" Nullable="false" />
+    <Property Name="MM_Color" Type="nvarchar" MaxLength="50" />
+    <Property Name="MM_Font" Type="nvarchar" MaxLength="50" />
+    <Property Name="MM_IsBold" Type="bit" Nullable="false" />
+    <Property Name="MM_IsItalic" Type="bit" Nullable="false" />
+    <Property Name="MM_IcoS" Type="nvarchar" MaxLength="255" />
+    <Property Name="MM_IcoB" Type="nvarchar" MaxLength="255" />
+    <Property Name="MM_IsUse" Type="bit" Nullable="false" />
+    <Property Name="MM_IsShow" Type="bit" Nullable="false" />
+    <Property Name="MM_Intro" Type="nvarchar" MaxLength="255" />
+    <Property Name="MM_State" Type="bit" Nullable="false" />
+    <Property Name="MM_Func" Type="nvarchar" MaxLength="50" />
+    <Property Name="MM_WinWidth" Type="int" Nullable="false" />
+    <Property Name="MM_WinHeight" Type="int" Nullable="false" />
+    <Property Name="MM_IcoX" Type="int" Nullable="false" />
+    <Property Name="MM_IcoY" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ManageMenu_Point">
+    <Key>
+      <PropertyRef Name="MMP_Id" />
+    </Key>
+    <Property Name="MMP_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MMP_FileName" Type="nvarchar" MaxLength="150" />
+    <Property Name="MMP_IsUse" Type="bit" Nullable="false" />
+    <Property Name="MMP_IsShow" Type="bit" Nullable="false" />
+    <Property Name="MM_Id" Type="smallint" />
+    <Property Name="FPI_Id" Type="smallint" />
+  </EntityType>
+  <EntityType Name="Message">
+    <Key>
+      <PropertyRef Name="Msg_Id" />
+    </Key>
+    <Property Name="Msg_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Msg_Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Msg_Context" Type="nvarchar" MaxLength="255" />
+    <Property Name="Msg_CrtTime" Type="datetime" />
+    <Property Name="Msg_ToTime" Type="datetime" />
+    <Property Name="Msg_ReadTime" Type="datetime" />
+    <Property Name="Msg_State" Type="int" />
+    <Property Name="Msg_ToId" Type="int" />
+    <Property Name="Msg_OfBox" Type="int" />
+    <Property Name="Msg_ToAllId" Type="nvarchar" MaxLength="255" />
+    <Property Name="Msg_ToAllName" Type="nvarchar" MaxLength="255" />
+    <Property Name="Msg_OwnerId" Type="int" />
+    <Property Name="Msg_Del" Type="bit" Nullable="false" />
+    <Property Name="Org_Id" Type="int" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ac_ID" Type="int" Nullable="false" />
+    <Property Name="Msg_QQ" Type="nvarchar" MaxLength="255" />
+    <Property Name="Msg_Phone" Type="nvarchar" MaxLength="255" />
+    <Property Name="Msg_ReContext" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Msg_IsReply" Type="bit" Nullable="false" />
+    <Property Name="Cou_ID" Type="int" Nullable="false" />
+    <Property Name="Ol_ID" Type="int" />
+    <Property Name="Msg_IP" Type="nvarchar" MaxLength="200" />
+    <Property Name="Ac_AccName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Msg_PlayTime" Type="int" Nullable="false" />
+    <Property Name="Msg_Likenum" Type="int" Nullable="false" />
+    <Property Name="Ac_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ac_Photo" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="MessageBoard">
+    <Key>
+      <PropertyRef Name="Mb_Id" />
+    </Key>
+    <Property Name="Mb_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Mb_Title" Type="nvarchar" MaxLength="255" />
+    <Property Name="Mb_IsTheme" Type="bit" Nullable="false" />
+    <Property Name="Mb_Content" Type="ntext" />
+    <Property Name="Mb_Answer" Type="ntext" />
+    <Property Name="Mb_PID" Type="int" />
+    <Property Name="Mb_UID" Type="nvarchar" MaxLength="255" />
+    <Property Name="Mb_At" Type="int" />
+    <Property Name="Mb_CrtTime" Type="datetime" />
+    <Property Name="Mb_AnsTime" Type="datetime" />
+    <Property Name="Mb_IsAns" Type="bit" Nullable="false" />
+    <Property Name="Mb_IsShow" Type="bit" Nullable="false" />
+    <Property Name="Mb_IsDel" Type="bit" Nullable="false" />
+    <Property Name="Mb_IP" Type="nvarchar" MaxLength="255" />
+    <Property Name="Mb_Phone" Type="nvarchar" MaxLength="255" />
+    <Property Name="Mb_Email" Type="nvarchar" MaxLength="255" />
+    <Property Name="Mb_QQ" Type="nvarchar" MaxLength="50" />
+    <Property Name="Mb_FluxNumber" Type="int" />
+    <Property Name="Mb_ReplyNumber" Type="int" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Cou_ID" Type="int" Nullable="false" />
+    <Property Name="Ac_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ac_Photo" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ac_ID" Type="int" Nullable="false" />
+    <Property Name="Th_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MobileUser">
+    <Key>
+      <PropertyRef Name="Mu_Id" />
+    </Key>
+    <Property Name="Mu_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Mu_Phone" Type="nvarchar" MaxLength="255" />
+    <Property Name="Mu_LastTime" Type="datetime" />
+    <Property Name="Mu_Sex" Type="int" />
+    <Property Name="Mu_Age" Type="int" />
+    <Property Name="Mu_Post" Type="nvarchar" MaxLength="255" />
+    <Property Name="Mu_Depart" Type="nvarchar" MaxLength="255" />
+    <Property Name="Mu_Number" Type="int" />
+    <Property Name="Mu_Version" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="MoneyAccount">
+    <Key>
+      <PropertyRef Name="Ma_ID" />
+    </Key>
+    <Property Name="Ma_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ac_ID" Type="int" Nullable="false" />
+    <Property Name="Ma_Total" Type="money" Nullable="false" />
+    <Property Name="Ma_Money" Type="money" Nullable="false" />
+    <Property Name="Ma_Source" Type="nvarchar" MaxLength="200" />
+    <Property Name="Ma_Type" Type="int" Nullable="false" />
+    <Property Name="Ma_Info" Type="nvarchar" MaxLength="500" />
+    <Property Name="Ma_Remark" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Ma_CrtTime" Type="datetime" Nullable="false" />
+    <Property Name="Rc_Code" Type="nvarchar" MaxLength="100" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Ma_Serial" Type="nvarchar" MaxLength="100" />
+    <Property Name="Ma_IsSuccess" Type="bit" Nullable="false" />
+    <Property Name="Ma_From" Type="int" Nullable="false" />
+    <Property Name="Pai_ID" Type="int" Nullable="false" />
+    <Property Name="Ma_Status" Type="int" Nullable="false" />
+    <Property Name="Ma_Buyer" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ma_Seller" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Navigation">
+    <Key>
+      <PropertyRef Name="Nav_ID" />
+    </Key>
+    <Property Name="Nav_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nav_PID" Type="int" Nullable="false" />
+    <Property Name="Nav_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Nav_EnName" Type="nvarchar" MaxLength="255" />
+    <Property Name="Nav_Url" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Nav_Target" Type="nvarchar" MaxLength="255" />
+    <Property Name="Nav_Event" Type="nvarchar(max)" />
+    <Property Name="Nav_Image" Type="nvarchar" MaxLength="255" />
+    <Property Name="Nav_Color" Type="nvarchar" MaxLength="255" />
+    <Property Name="Nav_Font" Type="nvarchar" MaxLength="255" />
+    <Property Name="Nav_Child" Type="int" Nullable="false" />
+    <Property Name="Nav_Tax" Type="int" Nullable="false" />
+    <Property Name="Nav_Intro" Type="nvarchar" MaxLength="255" />
+    <Property Name="Nav_Title" Type="nvarchar" MaxLength="255" />
+    <Property Name="Nav_Type" Type="nvarchar" MaxLength="255" />
+    <Property Name="Nav_Site" Type="nvarchar" MaxLength="255" />
+    <Property Name="Nav_CrtTime" Type="datetime" Nullable="false" />
+    <Property Name="Nav_IsShow" Type="bit" Nullable="false" />
+    <Property Name="Nav_IsBold" Type="bit" Nullable="false" />
+    <Property Name="Nav_Logo" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="NewsNote">
+    <Key>
+      <PropertyRef Name="Nn_Id" />
+    </Key>
+    <Property Name="Nn_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Art_Id" Type="int" />
+    <Property Name="Nn_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Nn_Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Nn_Details" Type="nvarchar" MaxLength="50" />
+    <Property Name="Nn_CrtTime" Type="datetime" />
+    <Property Name="Nn_IP" Type="nvarchar" MaxLength="50" />
+    <Property Name="Nn_IsShow" Type="bit" Nullable="false" />
+    <Property Name="Nn_Email" Type="nvarchar" MaxLength="100" />
+    <Property Name="Nn_Province" Type="nvarchar" MaxLength="255" />
+    <Property Name="Nn_City" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Notice">
+    <Key>
+      <PropertyRef Name="No_Id" />
+    </Key>
+    <Property Name="No_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="No_Ttl" Type="nvarchar" MaxLength="255" />
+    <Property Name="No_Context" Type="ntext" />
+    <Property Name="No_IsShow" Type="bit" Nullable="false" />
+    <Property Name="No_IsOpen" Type="bit" Nullable="false" />
+    <Property Name="No_IsTop" Type="bit" Nullable="false" />
+    <Property Name="No_CrtTime" Type="datetime" />
+    <Property Name="No_StartTime" Type="datetime" />
+    <Property Name="No_EndTime" Type="datetime" />
+    <Property Name="Acc_Id" Type="int" />
+    <Property Name="Acc_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="No_Organ" Type="nvarchar" MaxLength="50" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Organization">
+    <Key>
+      <PropertyRef Name="Org_ID" />
+    </Key>
+    <Property Name="Org_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Org_Lang" Type="nvarchar" MaxLength="50" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_PlatformName" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_Keywords" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Org_Description" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Org_EnName" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_AbbrName" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_AbbrEnName" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_Address" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_Phone" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_Fax" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_Zip" Type="nvarchar" MaxLength="20" />
+    <Property Name="Org_WebSite" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_TwoDomain" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_Email" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_Weixin" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_Intro" Type="nvarchar(max)" />
+    <Property Name="Org_CoBank" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_BankAcc" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_Owner" Type="nvarchar" MaxLength="50" />
+    <Property Name="Org_License" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_LicensePic" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_Longitude" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_Latitude" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_Province" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_City" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_District" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_Street" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_Logo" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_QrCodeUrl" Type="nvarchar" MaxLength="500" />
+    <Property Name="Org_RegTime" Type="datetime" Nullable="false" />
+    <Property Name="Org_IsRoot" Type="bit" Nullable="false" />
+    <Property Name="Org_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Org_IsPass" Type="bit" Nullable="false" />
+    <Property Name="Org_IsDefault" Type="bit" Nullable="false" />
+    <Property Name="Olv_ID" Type="int" Nullable="false" />
+    <Property Name="Olv_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_Linkman" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_LinkmanPhone" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_LinkmanQQ" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_Template" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_Extracode" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Org_Config" Type="nvarchar(max)" />
+    <Property Name="Org_TemplateMobi" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_IsShow" Type="bit" Nullable="false" />
+    <Property Name="Org_ICP" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_QrCode" Type="nvarchar(max)" />
+    <Property Name="Org_GonganBeian" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="OrganLevel">
+    <Key>
+      <PropertyRef Name="Olv_ID" />
+    </Key>
+    <Property Name="Olv_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Olv_Level" Type="int" Nullable="false" />
+    <Property Name="Olv_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Olv_Intro" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Olv_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Olv_Tag" Type="nvarchar" MaxLength="255" />
+    <Property Name="Olv_Tax" Type="int" Nullable="false" />
+    <Property Name="Olv_IsDefault" Type="bit" Nullable="false" />
+    <Property Name="Ps_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Outline">
+    <Key>
+      <PropertyRef Name="Ol_ID" />
+    </Key>
+    <Property Name="Ol_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ol_Name" Type="nvarchar" MaxLength="500" />
+    <Property Name="Ol_Intro" Type="nvarchar(max)" />
+    <Property Name="Ol_PID" Type="int" Nullable="false" />
+    <Property Name="Ol_Tax" Type="int" Nullable="false" />
+    <Property Name="Ol_Level" Type="int" Nullable="false" />
+    <Property Name="Ol_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Ol_IsFree" Type="bit" Nullable="false" />
+    <Property Name="Ol_Courseware" Type="nvarchar(max)" />
+    <Property Name="Ol_Video" Type="nvarchar(max)" />
+    <Property Name="Ol_LessonPlan" Type="nvarchar(max)" />
+    <Property Name="Cou_ID" Type="int" Nullable="false" />
+    <Property Name="Ol_UID" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Ol_XPath" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ol_QusNumber" Type="int" Nullable="false" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Sbj_ID" Type="int" Nullable="false" />
+    <Property Name="Ol_QuesCount" Type="int" Nullable="false" />
+    <Property Name="Ol_IsFinish" Type="bit" Nullable="false" />
+    <Property Name="Ol_IsNode" Type="bit" Nullable="false" />
+    <Property Name="Ol_IsVideo" Type="bit" Nullable="false" />
+    <Property Name="Ol_IsLive" Type="bit" Nullable="false" />
+    <Property Name="Ol_LiveTime" Type="datetime" Nullable="false" />
+    <Property Name="Ol_LiveSpan" Type="int" Nullable="false" />
+    <Property Name="Ol_LiveID" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="OutlineEvent">
+    <Key>
+      <PropertyRef Name="Oe_ID" />
+    </Key>
+    <Property Name="Oe_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ol_ID" Type="int" Nullable="false" />
+    <Property Name="Ol_UID" Type="nvarchar" MaxLength="200" />
+    <Property Name="Oe_Title" Type="nvarchar" MaxLength="500" />
+    <Property Name="Oe_Width" Type="int" Nullable="false" />
+    <Property Name="Oe_Height" Type="int" Nullable="false" />
+    <Property Name="Oe_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Oe_EventType" Type="int" Nullable="false" />
+    <Property Name="Oe_TriggerPoint" Type="int" Nullable="false" />
+    <Property Name="Oe_Context" Type="nvarchar(max)" />
+    <Property Name="Oe_Datatable" Type="nvarchar(max)" />
+    <Property Name="Oe_Questype" Type="int" Nullable="false" />
+    <Property Name="Oe_Answer" Type="nvarchar" MaxLength="500" />
+    <Property Name="Cou_ID" Type="int" Nullable="false" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Oe_CrtTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PayInterface">
+    <Key>
+      <PropertyRef Name="Pai_ID" />
+    </Key>
+    <Property Name="Pai_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Pai_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pai_Pattern" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pai_Tax" Type="int" Nullable="false" />
+    <Property Name="Pai_Intro" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Pai_Currency" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pai_Platform" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pai_ParterID" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pai_Key" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pai_InterfaceType" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pai_Feerate" Type="real" Nullable="false" />
+    <Property Name="Pai_Config" Type="nvarchar(max)" />
+    <Property Name="Pai_IsEnable" Type="bit" Nullable="false" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Pai_Returl" Type="nvarchar" MaxLength="500" />
+    <Property Name="Pai_Scene" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="PictMiniature">
+    <Key>
+      <PropertyRef Name="Pmin_Id" />
+    </Key>
+    <Property Name="Pmin_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Pmin_Tax" Type="int" />
+    <Property Name="Pmin_Width" Type="int" />
+    <Property Name="Pmin_Height" Type="int" />
+    <Property Name="Pmin_Unit" Type="nvarchar" MaxLength="10" />
+    <Property Name="Pmin_IsRestrain" Type="bit" Nullable="false" />
+    <Property Name="Pmin_RestrainObj" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pmin_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Pmin_File" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Picture">
+    <Key>
+      <PropertyRef Name="Pic_Id" />
+    </Key>
+    <Property Name="Pic_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Col_Id" Type="int" />
+    <Property Name="Col_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pic_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pic_Intro" Type="ntext" />
+    <Property Name="Pic_FilePath" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pic_FilePathSmall" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pic_IsShow" Type="bit" Nullable="false" />
+    <Property Name="Pic_Keywords" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pic_Descr" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pic_IsRec" Type="bit" Nullable="false" />
+    <Property Name="Pic_IsTop" Type="bit" Nullable="false" />
+    <Property Name="Pic_IsHot" Type="bit" Nullable="false" />
+    <Property Name="Pic_IsDel" Type="bit" Nullable="false" />
+    <Property Name="Pic_IsCover" Type="bit" Nullable="false" />
+    <Property Name="Pic_CrtTime" Type="datetime" />
+    <Property Name="Pic_Size" Type="int" />
+    <Property Name="Pic_Width" Type="int" />
+    <Property Name="Pic_Height" Type="int" />
+    <Property Name="Pic_Number" Type="int" />
+    <Property Name="Pic_Tax" Type="int" />
+    <Property Name="Pic_Uid" Type="nvarchar" MaxLength="64" />
+    <Property Name="Acc_Id" Type="int" />
+    <Property Name="Acc_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pic_IsStatic" Type="bit" Nullable="false" />
+    <Property Name="Pic_PushTime" Type="datetime" />
+    <Property Name="Pic_Label" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pic_Type" Type="nvarchar" MaxLength="255" />
+    <Property Name="OtherData" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="PointAccount">
+    <Key>
+      <PropertyRef Name="Pa_ID" />
+    </Key>
+    <Property Name="Pa_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ac_ID" Type="int" Nullable="false" />
+    <Property Name="Pa_Total" Type="int" Nullable="false" />
+    <Property Name="Pa_TotalAmount" Type="int" Nullable="false" />
+    <Property Name="Pa_Value" Type="int" Nullable="false" />
+    <Property Name="Pa_Source" Type="nvarchar" MaxLength="200" />
+    <Property Name="Pa_Type" Type="int" Nullable="false" />
+    <Property Name="Pa_Info" Type="nvarchar" MaxLength="500" />
+    <Property Name="Pa_Remark" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Pa_CrtTime" Type="datetime" Nullable="false" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Pa_Serial" Type="nvarchar" MaxLength="100" />
+    <Property Name="Pa_From" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Position">
+    <Key>
+      <PropertyRef Name="Posi_Id" />
+    </Key>
+    <Property Name="Posi_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Posi_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Posi_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Posi_Tax" Type="int" Nullable="false" />
+    <Property Name="Posi_Intro" Type="nvarchar" MaxLength="255" />
+    <Property Name="Posi_IsAdmin" Type="bit" Nullable="false" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="Pd_Id" />
+    </Key>
+    <Property Name="Pd_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Pd_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pd_Tax" Type="int" />
+    <Property Name="Pd_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Pd_IsNew" Type="bit" Nullable="false" />
+    <Property Name="Pd_IsRec" Type="bit" Nullable="false" />
+    <Property Name="Col_Id" Type="int" />
+    <Property Name="Col_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pd_Model" Type="nvarchar" MaxLength="100" />
+    <Property Name="Pd_Code" Type="nvarchar" MaxLength="100" />
+    <Property Name="Pd_Prise" Type="real" />
+    <Property Name="Pd_Weight" Type="real" />
+    <Property Name="Pd_ColorName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Pd_Color" Type="nvarchar" MaxLength="50" />
+    <Property Name="Pd_KeyWords" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pd_Descr" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pd_Logo" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pd_LogoSmall" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pd_QrCode" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pd_Number" Type="int" />
+    <Property Name="Pd_Stocks" Type="int" />
+    <Property Name="Pd_Unit" Type="nvarchar" MaxLength="50" />
+    <Property Name="Pd_SaleTime" Type="datetime" />
+    <Property Name="Pd_CrtTime" Type="datetime" />
+    <Property Name="Pd_IsNote" Type="bit" Nullable="false" />
+    <Property Name="Pd_Intro" Type="ntext" />
+    <Property Name="Pd_Details" Type="ntext" />
+    <Property Name="Pd_IsDel" Type="bit" Nullable="false" />
+    <Property Name="Pd_IsStatic" Type="bit" Nullable="false" />
+    <Property Name="Pd_PushTime" Type="datetime" />
+    <Property Name="Pd_Label" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pd_Uid" Type="nvarchar" MaxLength="255" />
+    <Property Name="Acc_Id" Type="int" />
+    <Property Name="Acc_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pfact_Id" Type="int" />
+    <Property Name="Pori_Id" Type="int" />
+    <Property Name="Pmat_Id" Type="int" />
+    <Property Name="OtherData" Type="ntext" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Product_Package">
+    <Key>
+      <PropertyRef Name="Pdpk_Id" />
+    </Key>
+    <Property Name="Pdpk_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Pd_Id" Type="int" />
+    <Property Name="PPK_Id" Type="int" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ProductFactory">
+    <Key>
+      <PropertyRef Name="Pfact_Id" />
+    </Key>
+    <Property Name="Pfact_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Pfact_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pfact_Addr" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pfact_Zip" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pfact_Intro" Type="ntext" />
+    <Property Name="Pfact_Tel" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pfact_Website" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pfact_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ProductMaterial">
+    <Key>
+      <PropertyRef Name="Pmat_Id" />
+    </Key>
+    <Property Name="Pmat_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Pmat_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pmat_Intro" Type="ntext" />
+    <Property Name="Pmat_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ProductMessage">
+    <Key>
+      <PropertyRef Name="Pm_Id" />
+    </Key>
+    <Property Name="Pm_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Pm_Title" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pm_Context" Type="ntext" />
+    <Property Name="Pm_Answer" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pm_CrtTime" Type="datetime" />
+    <Property Name="Pm_AnsTime" Type="datetime" />
+    <Property Name="Pm_IsAns" Type="bit" Nullable="false" />
+    <Property Name="Pm_IsShow" Type="bit" Nullable="false" />
+    <Property Name="Pm_IP" Type="nvarchar" MaxLength="50" />
+    <Property Name="Pm_Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Pm_Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Pm_QQ" Type="nvarchar" MaxLength="50" />
+    <Property Name="Pm_Address" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pd_Id" Type="int" />
+    <Property Name="Pd_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ProductOrigin">
+    <Key>
+      <PropertyRef Name="Pori_Id" />
+    </Key>
+    <Property Name="Pori_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Pori_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pori_Intro" Type="ntext" />
+    <Property Name="Pori_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ProductPackage">
+    <Key>
+      <PropertyRef Name="PPK_Id" />
+    </Key>
+    <Property Name="PPK_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PPK_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="PPK_IsUse" Type="bit" Nullable="false" />
+    <Property Name="PPK_Logo" Type="nvarchar" MaxLength="255" />
+    <Property Name="PPK_Price" Type="int" />
+    <Property Name="PPK_DiscountPrice" Type="int" />
+    <Property Name="PPK_StartTime" Type="datetime" />
+    <Property Name="PPK_EndTime" Type="datetime" />
+    <Property Name="PPK_Intro" Type="ntext" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ProfitSharing">
+    <Key>
+      <PropertyRef Name="Ps_ID" />
+    </Key>
+    <Property Name="Ps_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ps_IsTheme" Type="bit" Nullable="false" />
+    <Property Name="Ps_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Ps_Level" Type="int" Nullable="false" />
+    <Property Name="Ps_Intro" Type="nvarchar" MaxLength="500" />
+    <Property Name="Ps_Moneyratio" Type="int" Nullable="false" />
+    <Property Name="Ps_Couponratio" Type="int" Nullable="false" />
+    <Property Name="Ps_MoneyValue" Type="money" Nullable="false" />
+    <Property Name="Ps_CouponValue" Type="int" Nullable="false" />
+    <Property Name="Ps_PID" Type="int" Nullable="false" />
+    <Property Name="Ps_Name" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Purview">
+    <Key>
+      <PropertyRef Name="Pur_Id" />
+    </Key>
+    <Property Name="Pur_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Dep_Id" Type="int" />
+    <Property Name="EGrp_Id" Type="int" />
+    <Property Name="Posi_Id" Type="int" />
+    <Property Name="MM_Id" Type="int" />
+    <Property Name="Pur_State" Type="nvarchar" MaxLength="50" />
+    <Property Name="Pur_Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="Org_ID" Type="int" />
+    <Property Name="Olv_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="QuesAnswer">
+    <Key>
+      <PropertyRef Name="Ans_ID" />
+    </Key>
+    <Property Name="Ans_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Qus_ID" Type="int" Nullable="false" />
+    <Property Name="Qus_UID" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ans_Context" Type="ntext" />
+    <Property Name="Ans_IsCorrect" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Questions">
+    <Key>
+      <PropertyRef Name="Qus_ID" />
+    </Key>
+    <Property Name="Qus_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Qus_Title" Type="nvarchar(max)" />
+    <Property Name="Qus_Answer" Type="nvarchar(max)" />
+    <Property Name="Qus_Diff" Type="int" Nullable="false" />
+    <Property Name="Qus_Type" Type="int" Nullable="false" />
+    <Property Name="Qus_Explain" Type="nvarchar(max)" />
+    <Property Name="Qus_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Qus_IsError" Type="bit" Nullable="false" />
+    <Property Name="Qus_UID" Type="nvarchar" MaxLength="255" />
+    <Property Name="Qus_Number" Type="real" Nullable="false" />
+    <Property Name="Qus_CrtTime" Type="datetime" Nullable="false" />
+    <Property Name="Qus_LastTime" Type="datetime" Nullable="false" />
+    <Property Name="Qus_IsCorrect" Type="bit" Nullable="false" />
+    <Property Name="Kn_ID" Type="int" Nullable="false" />
+    <Property Name="Sbj_ID" Type="int" Nullable="false" />
+    <Property Name="Qus_ErrorInfo" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Cou_ID" Type="int" Nullable="false" />
+    <Property Name="Ol_ID" Type="int" Nullable="false" />
+    <Property Name="Qus_IsWrong" Type="bit" Nullable="false" />
+    <Property Name="Qt_ID" Type="int" Nullable="false" />
+    <Property Name="Qus_WrongInfo" Type="nvarchar(max)" />
+    <Property Name="Qus_Items" Type="nvarchar(max)" />
+    <Property Name="Qus_IsTitle" Type="bit" Nullable="false" />
+    <Property Name="Ol_Name" Type="nvarchar" MaxLength="500" />
+    <Property Name="Sbj_Name" Type="nvarchar" MaxLength="500" />
+    <Property Name="Qus_Tax" Type="int" Nullable="false" />
+    <Property Name="Qus_Errornum" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="QuesTypes">
+    <Key>
+      <PropertyRef Name="Qt_ID" />
+    </Key>
+    <Property Name="Qt_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Qt_Name" Type="nvarchar" MaxLength="300" />
+    <Property Name="Qt_Intro" Type="nvarchar(max)" />
+    <Property Name="Qt_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Qt_Type" Type="int" Nullable="false" />
+    <Property Name="Qt_TypeName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Qt_Tax" Type="int" Nullable="false" />
+    <Property Name="Qt_Count" Type="int" Nullable="false" />
+    <Property Name="Cou_ID" Type="int" Nullable="false" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RechargeCode">
+    <Key>
+      <PropertyRef Name="Rc_ID" />
+    </Key>
+    <Property Name="Rc_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Rc_Code" Type="nvarchar" MaxLength="100" />
+    <Property Name="Rc_Pw" Type="nvarchar" MaxLength="20" />
+    <Property Name="Rc_Price" Type="int" Nullable="false" />
+    <Property Name="Rc_CrtTime" Type="datetime" Nullable="false" />
+    <Property Name="Rc_UsedTime" Type="datetime" Nullable="false" />
+    <Property Name="Rc_IsEnable" Type="bit" />
+    <Property Name="Rc_IsUsed" Type="bit" Nullable="false" />
+    <Property Name="Rc_Type" Type="int" Nullable="false" />
+    <Property Name="Rs_ID" Type="int" Nullable="false" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Ac_ID" Type="int" Nullable="false" />
+    <Property Name="Ac_AccName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Rc_LimitStart" Type="datetime" Nullable="false" />
+    <Property Name="Rc_LimitEnd" Type="datetime" Nullable="false" />
+    <Property Name="Rc_QrcodeBase64" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="RechargeSet">
+    <Key>
+      <PropertyRef Name="Rs_ID" />
+    </Key>
+    <Property Name="Rs_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Rs_Count" Type="int" Nullable="false" />
+    <Property Name="Rs_Price" Type="int" Nullable="false" />
+    <Property Name="Rs_CrtTime" Type="datetime" Nullable="false" />
+    <Property Name="Rs_Theme" Type="nvarchar" MaxLength="200" />
+    <Property Name="Rs_Intro" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Rs_Pw" Type="nvarchar" MaxLength="100" />
+    <Property Name="Rs_UsedCount" Type="int" Nullable="false" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Rs_LimitStart" Type="datetime" Nullable="false" />
+    <Property Name="Rs_LimitEnd" Type="datetime" Nullable="false" />
+    <Property Name="Rs_IsEnable" Type="bit" Nullable="false" />
+    <Property Name="Rs_CodeLength" Type="int" Nullable="false" />
+    <Property Name="Rs_PwLength" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ShowPicture">
+    <Key>
+      <PropertyRef Name="Shp_ID" />
+    </Key>
+    <Property Name="Shp_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Shp_File" Type="nvarchar" MaxLength="100" />
+    <Property Name="Shp_Url" Type="nvarchar" MaxLength="500" />
+    <Property Name="Shp_Target" Type="nvarchar" MaxLength="100" />
+    <Property Name="Shp_IsShow" Type="bit" Nullable="false" />
+    <Property Name="Shp_Site" Type="nvarchar" MaxLength="50" />
+    <Property Name="Shp_BgColor" Type="nvarchar" MaxLength="50" />
+    <Property Name="Shp_Tax" Type="int" Nullable="false" />
+    <Property Name="Shp_Intro" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SingleSignOn">
+    <Key>
+      <PropertyRef Name="SSO_ID" />
+    </Key>
+    <Property Name="SSO_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SSO_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="SSO_IsUse" Type="bit" />
+    <Property Name="SSO_APPID" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="SSO_IsAdd" Type="bit" Nullable="false" />
+    <Property Name="SSO_Domain" Type="nvarchar" MaxLength="500" />
+    <Property Name="SSO_Direction" Type="nvarchar" MaxLength="50" />
+    <Property Name="SSO_Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="SSO_Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="SSO_Info" Type="nvarchar" MaxLength="500" />
+    <Property Name="SSO_CrtTime" Type="datetime" Nullable="false" />
+    <Property Name="SSO_Power" Type="nvarchar" MaxLength="50" />
+    <Property Name="SSO_Config" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="SmsFault">
+    <Key>
+      <PropertyRef Name="Smf_Id" />
+    </Key>
+    <Property Name="Smf_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Smf_Context" Type="nvarchar" MaxLength="255" />
+    <Property Name="Smf_SendTime" Type="datetime" />
+    <Property Name="Smf_CrtTime" Type="datetime" />
+    <Property Name="Smf_MobileTel" Type="nvarchar" MaxLength="255" />
+    <Property Name="Smf_SendName" Type="nvarchar" MaxLength="255" />
+    <Property Name="Smf_Company" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="SmsMessage">
+    <Key>
+      <PropertyRef Name="SMS_Id" />
+    </Key>
+    <Property Name="SMS_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sms_Context" Type="nvarchar" MaxLength="255" />
+    <Property Name="Sms_SendTime" Type="datetime" />
+    <Property Name="Sms_CrtTime" Type="datetime" />
+    <Property Name="Sms_Type" Type="int" />
+    <Property Name="Sms_SendId" Type="int" />
+    <Property Name="Sms_SendName" Type="nvarchar" MaxLength="255" />
+    <Property Name="Sms_MailBox" Type="int" />
+    <Property Name="Sms_State" Type="int" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Special">
+    <Key>
+      <PropertyRef Name="Sp_Id" />
+    </Key>
+    <Property Name="Sp_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sp_PatId" Type="int" />
+    <Property Name="Sp_Tax" Type="int" />
+    <Property Name="Sp_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Sp_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Sp_IsShow" Type="bit" Nullable="false" />
+    <Property Name="Sp_IsOut" Type="bit" Nullable="false" />
+    <Property Name="Sp_OutUrl" Type="nvarchar" MaxLength="255" />
+    <Property Name="Sp_Intro" Type="ntext" />
+    <Property Name="Sp_Details" Type="ntext" />
+    <Property Name="Sp_Keywords" Type="nvarchar" MaxLength="255" />
+    <Property Name="Sp_Descr" Type="nvarchar" MaxLength="255" />
+    <Property Name="Sp_PushTime" Type="datetime" />
+    <Property Name="Sp_Label" Type="nvarchar" MaxLength="255" />
+    <Property Name="Sp_Tootip" Type="nvarchar" MaxLength="255" />
+    <Property Name="Sp_Banner" Type="nvarchar" MaxLength="255" />
+    <Property Name="Sp_Uid" Type="nvarchar" MaxLength="255" />
+    <Property Name="Sp_Logo" Type="nvarchar" MaxLength="255" />
+    <Property Name="Sp_QrCode" Type="nvarchar" MaxLength="255" />
+    <Property Name="OtherData" Type="ntext" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Special_Article">
+    <Key>
+      <PropertyRef Name="Spa_Id" />
+    </Key>
+    <Property Name="Spa_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sp_Id" Type="int" />
+    <Property Name="Art_Id" Type="int" />
+    <Property Name="Org_Id" Type="int" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="St_ID" />
+    </Key>
+    <Property Name="St_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="St_AccName" Type="nvarchar" MaxLength="50" />
+    <Property Name="St_Pw" Type="nvarchar" MaxLength="100" />
+    <Property Name="St_Qus" Type="nvarchar" MaxLength="255" />
+    <Property Name="St_Anwser" Type="nvarchar" MaxLength="255" />
+    <Property Name="St_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="St_Pinyin" Type="nvarchar" MaxLength="50" />
+    <Property Name="St_Age" Type="int" Nullable="false" />
+    <Property Name="St_Birthday" Type="datetime" Nullable="false" />
+    <Property Name="St_IDCardNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="St_Photo" Type="nvarchar" MaxLength="255" />
+    <Property Name="St_Signature" Type="nvarchar" MaxLength="255" />
+    <Property Name="St_Intro" Type="nvarchar" MaxLength="2000" />
+    <Property Name="St_Major" Type="nvarchar" MaxLength="255" />
+    <Property Name="St_Education" Type="nvarchar" MaxLength="255" />
+    <Property Name="St_Sex" Type="int" Nullable="false" />
+    <Property Name="St_Native" Type="nvarchar" MaxLength="255" />
+    <Property Name="St_Nation" Type="nvarchar" MaxLength="50" />
+    <Property Name="St_CodeNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="St_Address" Type="nvarchar" MaxLength="255" />
+    <Property Name="St_AddrContact" Type="nvarchar" MaxLength="255" />
+    <Property Name="St_Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="St_IsOpenPhone" Type="bit" Nullable="false" />
+    <Property Name="St_PhoneMobi" Type="nvarchar" MaxLength="50" />
+    <Property Name="St_IsOpenMobi" Type="bit" Nullable="false" />
+    <Property Name="St_Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="St_Qq" Type="nvarchar" MaxLength="50" />
+    <Property Name="St_Weixin" Type="nvarchar" MaxLength="100" />
+    <Property Name="St_Zip" Type="nvarchar" MaxLength="50" />
+    <Property Name="St_LinkMan" Type="nvarchar" MaxLength="50" />
+    <Property Name="St_LinkManPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="St_IsPass" Type="bit" Nullable="false" />
+    <Property Name="St_IsUse" Type="bit" Nullable="false" />
+    <Property Name="St_RegTime" Type="datetime" Nullable="false" />
+    <Property Name="St_LastTime" Type="datetime" Nullable="false" />
+    <Property Name="St_CrtTime" Type="datetime" Nullable="false" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Sts_ID" Type="int" Nullable="false" />
+    <Property Name="Sts_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="St_Money" Type="real" Nullable="false" />
+    <Property Name="St_LastIP" Type="nvarchar" MaxLength="255" />
+    <Property Name="Dep_CnName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Dep_Id" Type="int" Nullable="false" />
+    <Property Name="St_CheckUID" Type="nvarchar" MaxLength="255" />
+    <Property Name="St_CurrCourse" Type="int" Nullable="false" />
+    <Property Name="Ac_ID" Type="int" Nullable="false" />
+    <Property Name="Ac_UID" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Student_Collect">
+    <Key>
+      <PropertyRef Name="Stc_ID" />
+    </Key>
+    <Property Name="Stc_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ac_ID" Type="int" Nullable="false" />
+    <Property Name="Cou_ID" Type="int" Nullable="false" />
+    <Property Name="Qus_ID" Type="int" Nullable="false" />
+    <Property Name="Qus_Type" Type="int" Nullable="false" />
+    <Property Name="Qus_Diff" Type="int" Nullable="false" />
+    <Property Name="Qus_Title" Type="nvarchar(max)" />
+    <Property Name="Sbj_ID" Type="int" Nullable="false" />
+    <Property Name="Stc_Level" Type="int" Nullable="false" />
+    <Property Name="Stc_Strange" Type="int" Nullable="false" />
+    <Property Name="Stc_CrtTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Student_Course">
+    <Key>
+      <PropertyRef Name="Stc_ID" />
+    </Key>
+    <Property Name="Stc_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ac_ID" Type="int" Nullable="false" />
+    <Property Name="Cou_ID" Type="int" Nullable="false" />
+    <Property Name="Stc_CrtTime" Type="datetime" Nullable="false" />
+    <Property Name="Stc_Money" Type="real" Nullable="false" />
+    <Property Name="Stc_StartTime" Type="datetime" Nullable="false" />
+    <Property Name="Stc_EndTime" Type="datetime" Nullable="false" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Rc_Code" Type="nvarchar" MaxLength="100" />
+    <Property Name="Stc_IsFree" Type="bit" Nullable="false" />
+    <Property Name="Stc_IsTry" Type="bit" Nullable="false" />
+    <Property Name="Stc_QuesScore" Type="float" Nullable="false" />
+    <Property Name="Stc_StudyScore" Type="float" Nullable="false" />
+    <Property Name="Stc_ExamScore" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Student_Notes">
+    <Key>
+      <PropertyRef Name="Stn_ID" />
+    </Key>
+    <Property Name="Stn_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Stn_PID" Type="int" />
+    <Property Name="Ac_ID" Type="int" Nullable="false" />
+    <Property Name="Cou_ID" Type="int" Nullable="false" />
+    <Property Name="Qus_ID" Type="int" Nullable="false" />
+    <Property Name="Qus_Type" Type="int" Nullable="false" />
+    <Property Name="Qus_Title" Type="nvarchar(max)" />
+    <Property Name="Stn_Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Stn_Context" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Stn_CrtTime" Type="datetime" Nullable="false" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Student_Ques">
+    <Key>
+      <PropertyRef Name="Squs_ID" />
+    </Key>
+    <Property Name="Squs_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ac_ID" Type="int" Nullable="false" />
+    <Property Name="Cou_ID" Type="int" Nullable="false" />
+    <Property Name="Qus_ID" Type="int" Nullable="false" />
+    <Property Name="Qus_Type" Type="int" Nullable="false" />
+    <Property Name="Qus_Diff" Type="int" Nullable="false" />
+    <Property Name="Sbj_ID" Type="int" Nullable="false" />
+    <Property Name="Squs_Level" Type="int" Nullable="false" />
+    <Property Name="Squs_CrtTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StudentSort">
+    <Key>
+      <PropertyRef Name="Sts_ID" />
+    </Key>
+    <Property Name="Sts_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sts_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Sts_Tax" Type="int" Nullable="false" />
+    <Property Name="Sts_Intro" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Sts_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Sts_IsDefault" Type="bit" Nullable="false" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Dep_CnName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Dep_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Subject">
+    <Key>
+      <PropertyRef Name="Sbj_ID" />
+    </Key>
+    <Property Name="Sbj_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sbj_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Sbj_ByName" Type="nvarchar" MaxLength="255" />
+    <Property Name="Sbj_Intro" Type="nvarchar(max)" />
+    <Property Name="Sbj_Tax" Type="int" Nullable="false" />
+    <Property Name="Sbj_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Sbj_CrtTime" Type="datetime" Nullable="false" />
+    <Property Name="Sbj_PassScore" Type="int" Nullable="false" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Sbj_PID" Type="int" Nullable="false" />
+    <Property Name="Sbj_Level" Type="int" Nullable="false" />
+    <Property Name="Sbj_XPath" Type="nvarchar" MaxLength="255" />
+    <Property Name="Sbj_CouNumber" Type="int" Nullable="false" />
+    <Property Name="Sbj_Logo" Type="nvarchar" MaxLength="100" />
+    <Property Name="Sbj_LogoSmall" Type="nvarchar" MaxLength="100" />
+    <Property Name="Dep_Id" Type="int" Nullable="false" />
+    <Property Name="Dep_CnName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Sbj_IsRec" Type="bit" Nullable="false" />
+    <Property Name="Sbj_Details" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="SystemPara">
+    <Key>
+      <PropertyRef Name="Sys_Id" />
+    </Key>
+    <Property Name="Sys_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sys_Key" Type="nvarchar" MaxLength="255" />
+    <Property Name="Sys_Value" Type="nvarchar(max)" />
+    <Property Name="Sys_Default" Type="nvarchar" MaxLength="255" />
+    <Property Name="Sys_ParaIntro" Type="nvarchar" MaxLength="255" />
+    <Property Name="Sys_Unit" Type="nvarchar" MaxLength="255" />
+    <Property Name="Sys_SelectUnit" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_Id" Type="int" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Task">
+    <Key>
+      <PropertyRef Name="Task_Id" />
+    </Key>
+    <Property Name="Task_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Task_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Task_Context" Type="ntext" />
+    <Property Name="Task_CrtTime" Type="datetime" />
+    <Property Name="Acc_Id" Type="int" />
+    <Property Name="Acc_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Task_StartTime" Type="datetime" />
+    <Property Name="Task_EndTime" Type="datetime" />
+    <Property Name="Task_State" Type="nvarchar" MaxLength="50" />
+    <Property Name="Task_IsComplete" Type="bit" Nullable="false" />
+    <Property Name="Task_CompleteTime" Type="datetime" />
+    <Property Name="Task_Level" Type="int" />
+    <Property Name="Task_Tax" Type="int" />
+    <Property Name="Task_WorkerId" Type="int" />
+    <Property Name="Task_WorkerName" Type="nvarchar" MaxLength="255" />
+    <Property Name="Task_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Task_WorkLog" Type="ntext" />
+    <Property Name="Task_CompletePer" Type="int" />
+    <Property Name="Task_IsGoback" Type="bit" Nullable="false" />
+    <Property Name="Task_GobackText" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Teacher">
+    <Key>
+      <PropertyRef Name="Th_ID" />
+    </Key>
+    <Property Name="Th_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Th_AccName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Th_Pw" Type="nvarchar" MaxLength="100" />
+    <Property Name="Th_Qus" Type="nvarchar" MaxLength="255" />
+    <Property Name="Th_Anwser" Type="nvarchar" MaxLength="255" />
+    <Property Name="Th_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Th_Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Th_Pinyin" Type="nvarchar" MaxLength="50" />
+    <Property Name="Th_Age" Type="int" />
+    <Property Name="Th_Birthday" Type="datetime" />
+    <Property Name="Th_IDCardNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Th_Photo" Type="nvarchar" MaxLength="255" />
+    <Property Name="Th_Signature" Type="nvarchar" MaxLength="255" />
+    <Property Name="Th_Intro" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Th_Job" Type="nvarchar" MaxLength="255" />
+    <Property Name="Th_Major" Type="nvarchar" MaxLength="255" />
+    <Property Name="Th_Education" Type="nvarchar" MaxLength="255" />
+    <Property Name="Th_Sex" Type="int" />
+    <Property Name="Th_Native" Type="nvarchar" MaxLength="255" />
+    <Property Name="Th_Nation" Type="nvarchar" MaxLength="50" />
+    <Property Name="Th_CodeNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Th_Address" Type="nvarchar" MaxLength="255" />
+    <Property Name="Th_AddrContact" Type="nvarchar" MaxLength="255" />
+    <Property Name="Th_Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Th_IsOpenPhone" Type="bit" />
+    <Property Name="Th_PhoneMobi" Type="nvarchar" MaxLength="50" />
+    <Property Name="Th_IsOpenMobi" Type="bit" />
+    <Property Name="Th_Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Th_Qq" Type="nvarchar" MaxLength="50" />
+    <Property Name="Th_Weixin" Type="nvarchar" MaxLength="100" />
+    <Property Name="Th_Zip" Type="nvarchar" MaxLength="50" />
+    <Property Name="Th_LinkMan" Type="nvarchar" MaxLength="50" />
+    <Property Name="Th_LinkManPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Th_IsPass" Type="bit" />
+    <Property Name="Th_IsUse" Type="bit" />
+    <Property Name="Th_RegTime" Type="datetime" />
+    <Property Name="Th_LastTime" Type="datetime" />
+    <Property Name="Th_CrtTime" Type="datetime" />
+    <Property Name="Th_Tax" Type="int" />
+    <Property Name="Th_Score" Type="int" />
+    <Property Name="Th_ViewNum" Type="int" />
+    <Property Name="Org_ID" Type="int" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ths_ID" Type="int" />
+    <Property Name="Ths_Name" Type="varchar" MaxLength="255" />
+    <Property Name="Dep_Id" Type="int" />
+    <Property Name="Th_IsShow" Type="bit" />
+    <Property Name="Ac_ID" Type="int" />
+    <Property Name="Ac_UID" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Teacher_Course">
+    <Key>
+      <PropertyRef Name="Thc_ID" />
+    </Key>
+    <Property Name="Thc_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Th_ID" Type="int" Nullable="false" />
+    <Property Name="Cou_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TeacherComment">
+    <Key>
+      <PropertyRef Name="Thc_ID" />
+    </Key>
+    <Property Name="Thc_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ac_ID" Type="int" Nullable="false" />
+    <Property Name="Th_ID" Type="int" Nullable="false" />
+    <Property Name="Th_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Thc_Score" Type="float" Nullable="false" />
+    <Property Name="Thc_Comment" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Thc_Reply" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Thc_CrtTime" Type="datetime" Nullable="false" />
+    <Property Name="Thc_Device" Type="nvarchar" MaxLength="50" />
+    <Property Name="Thc_IP" Type="nvarchar" MaxLength="100" />
+    <Property Name="Thc_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Thc_IsShow" Type="bit" Nullable="false" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TeacherHistory">
+    <Key>
+      <PropertyRef Name="Thh_ID" />
+    </Key>
+    <Property Name="Thh_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Thh_Theme" Type="nvarchar" MaxLength="100" />
+    <Property Name="Thh_StartTime" Type="datetime" Nullable="false" />
+    <Property Name="Thh_EndTime" Type="datetime" />
+    <Property Name="Thh_CrtTime" Type="datetime" />
+    <Property Name="Thh_Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="Thh_Intro" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Thh_Success" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Thh_School" Type="nvarchar" MaxLength="200" />
+    <Property Name="Thh_Major" Type="nvarchar" MaxLength="200" />
+    <Property Name="Thh_Education" Type="nvarchar" MaxLength="200" />
+    <Property Name="Thh_Compay" Type="nvarchar" MaxLength="200" />
+    <Property Name="Thh_Job" Type="nvarchar" MaxLength="200" />
+    <Property Name="Thh_Post" Type="nvarchar" MaxLength="200" />
+    <Property Name="Th_ID" Type="int" Nullable="false" />
+    <Property Name="Th_Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TeacherSort">
+    <Key>
+      <PropertyRef Name="Ths_ID" />
+    </Key>
+    <Property Name="Ths_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ths_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ths_Tax" Type="int" Nullable="false" />
+    <Property Name="Ths_Intro" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Ths_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Ths_IsDefault" Type="bit" Nullable="false" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Team">
+    <Key>
+      <PropertyRef Name="Team_ID" />
+    </Key>
+    <Property Name="Team_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sbj_ID" Type="int" />
+    <Property Name="Sbj_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Team_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Team_ByName" Type="nvarchar" MaxLength="255" />
+    <Property Name="Team_Intro" Type="ntext" />
+    <Property Name="Team_Tax" Type="int" />
+    <Property Name="Team_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Team_Count" Type="int" />
+    <Property Name="Dep_ID" Type="int" />
+    <Property Name="Dep_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Team_CrtTime" Type="datetime" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Test">
+    <Key>
+      <PropertyRef Name="Test_ID" />
+    </Key>
+    <Property Name="Test_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Test_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Test_StartTime" Type="datetime" />
+    <Property Name="Test_Span" Type="int" />
+    <Property Name="Test_Tearcher" Type="nvarchar" MaxLength="50" />
+    <Property Name="Test_Room" Type="nvarchar" MaxLength="255" />
+    <Property Name="Tp_Id" Type="int" />
+    <Property Name="Tp_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Th_ID" Type="int" Nullable="false" />
+    <Property Name="Th_Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TestPaper">
+    <Key>
+      <PropertyRef Name="Tp_Id" />
+    </Key>
+    <Property Name="Tp_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tp_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Tp_Type" Type="int" Nullable="false" />
+    <Property Name="Tp_Intro" Type="nvarchar(max)" />
+    <Property Name="Tp_Logo" Type="nvarchar" MaxLength="255" />
+    <Property Name="Tp_Author" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tp_Total" Type="int" Nullable="false" />
+    <Property Name="Tp_Count" Type="int" Nullable="false" />
+    <Property Name="Tp_CrtTime" Type="datetime" Nullable="false" />
+    <Property Name="Tp_Lasttime" Type="datetime" Nullable="false" />
+    <Property Name="Sbj_ID" Type="int" Nullable="false" />
+    <Property Name="Sbj_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Tp_Diff" Type="int" Nullable="false" />
+    <Property Name="Tp_IsRec" Type="bit" Nullable="false" />
+    <Property Name="Tp_IsBuild" Type="bit" Nullable="false" />
+    <Property Name="Tp_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Tp_Span" Type="int" Nullable="false" />
+    <Property Name="Tp_UID" Type="nvarchar" MaxLength="255" />
+    <Property Name="Tp_Diff2" Type="int" Nullable="false" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Th_ID" Type="int" Nullable="false" />
+    <Property Name="Th_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Tp_PassScore" Type="int" Nullable="false" />
+    <Property Name="Cou_ID" Type="int" Nullable="false" />
+    <Property Name="Tp_Remind" Type="nvarchar(max)" />
+    <Property Name="Tp_SubName" Type="nvarchar" MaxLength="255" />
+    <Property Name="Tp_FromType" Type="int" Nullable="false" />
+    <Property Name="Tp_FromConfig" Type="nvarchar(max)" />
+    <Property Name="Cou_Name" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TestPaperItem">
+    <Key>
+      <PropertyRef Name="TPI_ID" />
+    </Key>
+    <Property Name="TPI_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tp_UID" Type="nvarchar" MaxLength="255" />
+    <Property Name="TPI_Type" Type="int" Nullable="false" />
+    <Property Name="TPI_Percent" Type="int" Nullable="false" />
+    <Property Name="TPI_Number" Type="int" Nullable="false" />
+    <Property Name="TPI_Count" Type="int" Nullable="false" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ol_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TestPaperQues">
+    <Key>
+      <PropertyRef Name="Tq_Id" />
+    </Key>
+    <Property Name="Tq_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Qk_Id" Type="int" />
+    <Property Name="Tp_Id" Type="int" />
+    <Property Name="Tq_Number" Type="real" />
+    <Property Name="Tq_Percent" Type="int" />
+    <Property Name="Tq_Type" Type="int" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="TestResults">
+    <Key>
+      <PropertyRef Name="Tr_ID" />
+    </Key>
+    <Property Name="Tr_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tr_Score" Type="real" />
+    <Property Name="Tr_ScoreFinal" Type="real" />
+    <Property Name="Tr_Draw" Type="real" />
+    <Property Name="Tr_Colligate" Type="real" />
+    <Property Name="Tr_Results" Type="ntext" />
+    <Property Name="Tr_CrtTime" Type="datetime" />
+    <Property Name="Tr_IP" Type="nvarchar" MaxLength="255" />
+    <Property Name="Tr_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Tr_Mac" Type="nvarchar" MaxLength="255" />
+    <Property Name="Tr_IsSubmit" Type="bit" Nullable="false" />
+    <Property Name="Tr_UID" Type="nvarchar" MaxLength="255" />
+    <Property Name="Sbj_ID" Type="int" />
+    <Property Name="Sbj_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Tp_Id" Type="int" />
+    <Property Name="Tp_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ac_ID" Type="int" Nullable="false" />
+    <Property Name="Ac_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Sts_ID" Type="int" Nullable="false" />
+    <Property Name="Sts_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="St_Sex" Type="int" Nullable="false" />
+    <Property Name="St_IDCardNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Cou_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TrPlan">
+    <Key>
+      <PropertyRef Name="TrP_Id" />
+    </Key>
+    <Property Name="TrP_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TrP_Time" Type="datetime" Nullable="false" />
+    <Property Name="TrP_Start" Type="datetime" Nullable="false" />
+    <Property Name="TrP_End" Type="datetime" Nullable="false" />
+    <Property Name="Dep_Id" Type="int" Nullable="false" />
+    <Property Name="Dep_CnName" Type="nvarchar" MaxLength="255" />
+    <Property Name="Sbj_ID" Type="int" Nullable="false" />
+    <Property Name="Sbj_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="TrP_GroupType" Type="int" Nullable="false" />
+    <Property Name="TrP_Num" Type="int" Nullable="false" />
+    <Property Name="TrP_Content" Type="nvarchar" MaxLength="255" />
+    <Property Name="TrP_Location" Type="nvarchar" MaxLength="255" />
+    <Property Name="TrP_Teacher" Type="nvarchar" MaxLength="255" />
+    <Property Name="TrP_Way" Type="nvarchar" MaxLength="255" />
+    <Property Name="TrP_Result" Type="int" Nullable="false" />
+    <Property Name="TrP_UID" Type="varchar" MaxLength="255" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="User_Id" />
+    </Key>
+    <Property Name="User_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="User_AccName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="User_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="User_Sex" Type="int" />
+    <Property Name="User_IsUse" Type="bit" Nullable="false" />
+    <Property Name="User_Pw" Type="nvarchar" MaxLength="255" />
+    <Property Name="User_Email" Type="nvarchar" MaxLength="100" />
+    <Property Name="User_Qus" Type="nvarchar" MaxLength="255" />
+    <Property Name="User_Ans" Type="nvarchar" MaxLength="255" />
+    <Property Name="User_RegTime" Type="datetime" />
+    <Property Name="User_LastTime" Type="datetime" />
+    <Property Name="User_LoginNumber" Type="int" />
+    <Property Name="User_Tel" Type="nvarchar" MaxLength="50" />
+    <Property Name="User_MobileTel" Type="nvarchar" MaxLength="50" />
+    <Property Name="User_QQ" Type="nvarchar" MaxLength="50" />
+    <Property Name="User_Msn" Type="nvarchar" MaxLength="100" />
+    <Property Name="UGrp_Id" Type="int" />
+    <Property Name="UGrp_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_Id" Type="int" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="UserGroup">
+    <Key>
+      <PropertyRef Name="UGrp_Id" />
+    </Key>
+    <Property Name="UGrp_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UGrp_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="UGrp_IsUse" Type="bit" Nullable="false" />
+    <Property Name="UGrp_Tax" Type="int" />
+    <Property Name="UGrp_Intro" Type="nvarchar" MaxLength="255" />
+    <Property Name="UGrp_IsDefault" Type="bit" Nullable="false" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Video">
+    <Key>
+      <PropertyRef Name="Vi_Id" />
+    </Key>
+    <Property Name="Vi_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Vi_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Vi_Intro" Type="ntext" />
+    <Property Name="Vi_Details" Type="ntext" />
+    <Property Name="Vi_VideoFile" Type="nvarchar" MaxLength="255" />
+    <Property Name="Vi_FilePath" Type="nvarchar" MaxLength="255" />
+    <Property Name="Vi_FilePathSmall" Type="nvarchar" MaxLength="255" />
+    <Property Name="Vi_IsShow" Type="bit" Nullable="false" />
+    <Property Name="Vi_Keywords" Type="nvarchar" MaxLength="255" />
+    <Property Name="Vi_Descr" Type="nvarchar" MaxLength="255" />
+    <Property Name="Vi_IsRec" Type="bit" Nullable="false" />
+    <Property Name="Vi_IsTop" Type="bit" Nullable="false" />
+    <Property Name="Vi_IsHot" Type="bit" Nullable="false" />
+    <Property Name="Vi_IsDel" Type="bit" Nullable="false" />
+    <Property Name="Vi_IsCover" Type="bit" Nullable="false" />
+    <Property Name="Vi_CrtTime" Type="datetime" />
+    <Property Name="Vi_Size" Type="int" />
+    <Property Name="Vi_Width" Type="int" />
+    <Property Name="Vi_Height" Type="int" />
+    <Property Name="Vi_Number" Type="int" />
+    <Property Name="Vi_Tax" Type="int" />
+    <Property Name="Col_Id" Type="int" />
+    <Property Name="Col_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Acc_Id" Type="int" />
+    <Property Name="Acc_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Vi_IsStatic" Type="bit" Nullable="false" />
+    <Property Name="Vi_PushTime" Type="datetime" />
+    <Property Name="Vi_Label" Type="nvarchar" MaxLength="255" />
+    <Property Name="Vi_Uid" Type="nvarchar" MaxLength="255" />
+    <Property Name="OtherData" Type="nvarchar" MaxLength="255" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Vote">
+    <Key>
+      <PropertyRef Name="Vt_Id" />
+    </Key>
+    <Property Name="Vt_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Vt_UniqueId" Type="nvarchar" MaxLength="64" />
+    <Property Name="Vt_IsTheme" Type="bit" Nullable="false" />
+    <Property Name="Vt_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Vt_Type" Type="int" />
+    <Property Name="Vt_Intro" Type="ntext" />
+    <Property Name="Vt_Tax" Type="int" />
+    <Property Name="Vt_SelectType" Type="int" />
+    <Property Name="Vt_IsShow" Type="bit" Nullable="false" />
+    <Property Name="Vt_IsUse" Type="bit" Nullable="false" />
+    <Property Name="Vt_IsAllowSee" Type="bit" Nullable="false" />
+    <Property Name="Vt_IsImage" Type="bit" Nullable="false" />
+    <Property Name="Vt_CrtTime" Type="datetime" />
+    <Property Name="Vt_StartTime" Type="datetime" />
+    <Property Name="Vt_OverTime" Type="datetime" />
+    <Property Name="Vt_Logo" Type="nvarchar" MaxLength="255" />
+    <Property Name="Vt_Image" Type="nvarchar" MaxLength="255" />
+    <Property Name="Vt_ImageSmall" Type="nvarchar" MaxLength="255" />
+    <Property Name="Vt_Number" Type="int" />
+    <Property Name="Org_ID" Type="int" Nullable="false" />
+    <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityContainer Name="examweishaModelStoreContainer">
+    <EntitySet Name="Accessory" EntityType="Self.Accessory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Accounts" EntityType="Self.Accounts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AddressList" EntityType="Self.AddressList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AddressSort" EntityType="Self.AddressSort" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Article" EntityType="Self.Article" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Columns" EntityType="Self.Columns" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CouponAccount" EntityType="Self.CouponAccount" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Course" EntityType="Self.Course" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CoursePrice" EntityType="Self.CoursePrice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DailyLog" EntityType="Self.DailyLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Depart" EntityType="Self.Depart" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Depart_Subject" EntityType="Self.Depart_Subject" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Download" EntityType="Self.Download" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DownloadOS" EntityType="Self.DownloadOS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DownloadType" EntityType="Self.DownloadType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmpAcc_Group" EntityType="Self.EmpAcc_Group" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmpAccount" EntityType="Self.EmpAccount" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmpGroup" EntityType="Self.EmpGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmpInfo" EntityType="Self.EmpInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmpTitle" EntityType="Self.EmpTitle" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ExamGroup" EntityType="Self.ExamGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Examination" EntityType="Self.Examination" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ExamResults" EntityType="Self.ExamResults" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ExamResultsTemp" EntityType="Self.ExamResultsTemp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Forum" EntityType="Self.Forum" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FuncPoint" EntityType="Self.FuncPoint" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Guide" EntityType="Self.Guide" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GuideColumns" EntityType="Self.GuideColumns" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InnerEmail" EntityType="Self.InnerEmail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InternalLink" EntityType="Self.InternalLink" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Knowledge" EntityType="Self.Knowledge" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KnowledgeSort" EntityType="Self.KnowledgeSort" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LearningCard" EntityType="Self.LearningCard" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LearningCardSet" EntityType="Self.LearningCardSet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LimitDomain" EntityType="Self.LimitDomain" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Links" EntityType="Self.Links" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LinksSort" EntityType="Self.LinksSort" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LogForStudentOnline" EntityType="Self.LogForStudentOnline" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LogForStudentQuestions" EntityType="Self.LogForStudentQuestions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LogForStudentStudy" EntityType="Self.LogForStudentStudy" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Logs" EntityType="Self.Logs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ManageMenu" EntityType="Self.ManageMenu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ManageMenu_Point" EntityType="Self.ManageMenu_Point" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Message" EntityType="Self.Message" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MessageBoard" EntityType="Self.MessageBoard" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MobileUser" EntityType="Self.MobileUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MoneyAccount" EntityType="Self.MoneyAccount" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Navigation" EntityType="Self.Navigation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NewsNote" EntityType="Self.NewsNote" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Notice" EntityType="Self.Notice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Organization" EntityType="Self.Organization" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrganLevel" EntityType="Self.OrganLevel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Outline" EntityType="Self.Outline" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OutlineEvent" EntityType="Self.OutlineEvent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PayInterface" EntityType="Self.PayInterface" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PictMiniature" EntityType="Self.PictMiniature" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Picture" EntityType="Self.Picture" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PointAccount" EntityType="Self.PointAccount" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Position" EntityType="Self.Position" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product_Package" EntityType="Self.Product_Package" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductFactory" EntityType="Self.ProductFactory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductMaterial" EntityType="Self.ProductMaterial" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductMessage" EntityType="Self.ProductMessage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductOrigin" EntityType="Self.ProductOrigin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductPackage" EntityType="Self.ProductPackage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProfitSharing" EntityType="Self.ProfitSharing" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Purview" EntityType="Self.Purview" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QuesAnswer" EntityType="Self.QuesAnswer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Questions" EntityType="Self.Questions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QuesTypes" EntityType="Self.QuesTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RechargeCode" EntityType="Self.RechargeCode" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RechargeSet" EntityType="Self.RechargeSet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ShowPicture" EntityType="Self.ShowPicture" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SingleSignOn" EntityType="Self.SingleSignOn" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SmsFault" EntityType="Self.SmsFault" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SmsMessage" EntityType="Self.SmsMessage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Special" EntityType="Self.Special" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Special_Article" EntityType="Self.Special_Article" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Student_Collect" EntityType="Self.Student_Collect" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Student_Course" EntityType="Self.Student_Course" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Student_Notes" EntityType="Self.Student_Notes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Student_Ques" EntityType="Self.Student_Ques" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudentSort" EntityType="Self.StudentSort" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Subject" EntityType="Self.Subject" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SystemPara" EntityType="Self.SystemPara" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Task" EntityType="Self.Task" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Teacher" EntityType="Self.Teacher" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Teacher_Course" EntityType="Self.Teacher_Course" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TeacherComment" EntityType="Self.TeacherComment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TeacherHistory" EntityType="Self.TeacherHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TeacherSort" EntityType="Self.TeacherSort" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Team" EntityType="Self.Team" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Test" EntityType="Self.Test" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TestPaper" EntityType="Self.TestPaper" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TestPaperItem" EntityType="Self.TestPaperItem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TestPaperQues" EntityType="Self.TestPaperQues" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TestResults" EntityType="Self.TestResults" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TrPlan" EntityType="Self.TrPlan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserGroup" EntityType="Self.UserGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Video" EntityType="Self.Video" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vote" EntityType="Self.Vote" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

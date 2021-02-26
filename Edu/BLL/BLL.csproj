@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{191F11AC-258B-49E2-9354-DEB73824F0F2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BLL</RootNamespace>
+    <AssemblyName>BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseService.cs" />
+    <Compile Include="Impl\AccessoryService.cs" />
+    <Compile Include="Impl\AccountsService.cs" />
+    <Compile Include="Impl\AddressListService.cs" />
+    <Compile Include="Impl\AddressSortService.cs" />
+    <Compile Include="Impl\ArticleSevice.cs" />
+    <Compile Include="Impl\ColumnsService.cs" />
+    <Compile Include="Impl\CouponAccountService.cs" />
+    <Compile Include="Impl\CoursePriceService.cs" />
+    <Compile Include="Impl\CourseService.cs" />
+    <Compile Include="Impl\DailyLogService.cs" />
+    <Compile Include="Impl\DepartService.cs" />
+    <Compile Include="Impl\Depart_SubjectService.cs" />
+    <Compile Include="Impl\DownloadOSService.cs" />
+    <Compile Include="Impl\DownloadService.cs" />
+    <Compile Include="Impl\DownloadTypeService.cs" />
+    <Compile Include="Impl\EmpAccountService.cs" />
+    <Compile Include="Impl\EmpAcc_GroupService.cs" />
+    <Compile Include="Impl\EmpGroupService.cs" />
+    <Compile Include="Impl\EmpInfoService.cs" />
+    <Compile Include="Impl\EmpTitleService.cs" />
+    <Compile Include="Impl\ExamGroupService.cs" />
+    <Compile Include="Impl\ExaminationService.cs" />
+    <Compile Include="Impl\ExamResultsService.cs" />
+    <Compile Include="Impl\ExamResultsTempService.cs" />
+    <Compile Include="Impl\ForumService.cs" />
+    <Compile Include="Impl\FuncPointService.cs" />
+    <Compile Include="Impl\GuideColumnsService.cs" />
+    <Compile Include="Impl\GuideService.cs" />
+    <Compile Include="Impl\InnerEmailService.cs" />
+    <Compile Include="Impl\InternalLinkService.cs" />
+    <Compile Include="Impl\KnowledgeService.cs" />
+    <Compile Include="Impl\KnowledgeSortService.cs" />
+    <Compile Include="Impl\LearningCardService.cs" />
+    <Compile Include="Impl\LearningCardSetService.cs" />
+    <Compile Include="Impl\LimitDomainService.cs" />
+    <Compile Include="Impl\LinksService.cs" />
+    <Compile Include="Impl\LinksSortService.cs" />
+    <Compile Include="Impl\LogForStudentOnlineService.cs" />
+    <Compile Include="Impl\LogForStudentQuestionsService.cs" />
+    <Compile Include="Impl\LogForStudentStudyService.cs" />
+    <Compile Include="Impl\LogsService.cs" />
+    <Compile Include="Impl\ManageMenuService.cs" />
+    <Compile Include="Impl\ManageMenu_PointService.cs" />
+    <Compile Include="Impl\MessageBoardService.cs" />
+    <Compile Include="Impl\MessageService.cs" />
+    <Compile Include="Impl\MobileUserService.cs" />
+    <Compile Include="Impl\MoneyAccountService.cs" />
+    <Compile Include="Impl\NavigationService.cs" />
+    <Compile Include="Impl\NewsNoteService.cs" />
+    <Compile Include="Impl\NoticeService.cs" />
+    <Compile Include="Impl\OrganizationService.cs" />
+    <Compile Include="Impl\OrganLevelService.cs" />
+    <Compile Include="Impl\OutlineEventService.cs" />
+    <Compile Include="Impl\OutlineService.cs" />
+    <Compile Include="Impl\PayInterfaceService.cs" />
+    <Compile Include="Impl\PictMiniatureService.cs" />
+    <Compile Include="Impl\PictureService.cs" />
+    <Compile Include="Impl\PointAccountService.cs" />
+    <Compile Include="Impl\PositionService.cs" />
+    <Compile Include="Impl\ProductFactoryService.cs" />
+    <Compile Include="Impl\ProductMaterialService.cs" />
+    <Compile Include="Impl\ProductMessageService.cs" />
+    <Compile Include="Impl\ProductOriginService.cs" />
+    <Compile Include="Impl\ProductPackageService.cs" />
+    <Compile Include="Impl\ProductService.cs" />
+    <Compile Include="Impl\Product_PackageService.cs" />
+    <Compile Include="Impl\ProfitSharingService.cs" />
+    <Compile Include="Impl\PurviewService.cs" />
+    <Compile Include="Impl\QuesAnswerService.cs" />
+    <Compile Include="Impl\QuestionsService.cs" />
+    <Compile Include="Impl\QuesTypesService.cs" />
+    <Compile Include="Impl\RechargeCodeService.cs" />
+    <Compile Include="Impl\RechargeSetService.cs" />
+    <Compile Include="Impl\ShowPictureService.cs" />
+    <Compile Include="Impl\SingleSignOnService.cs" />
+    <Compile Include="Impl\SmsFaultService.cs" />
+    <Compile Include="Impl\SmsMessageService.cs" />
+    <Compile Include="Impl\SpecialService.cs" />
+    <Compile Include="Impl\Special_ArticleService.cs" />
+    <Compile Include="Impl\StudentService.cs" />
+    <Compile Include="Impl\StudentSortService.cs" />
+    <Compile Include="Impl\Student_CollectService.cs" />
+    <Compile Include="Impl\Student_CourseService.cs" />
+    <Compile Include="Impl\Student_NotesService.cs" />
+    <Compile Include="Impl\Student_QuesService.cs" />
+    <Compile Include="Impl\SubjectService.cs" />
+    <Compile Include="Impl\SystemParaService.cs" />
+    <Compile Include="Impl\TaskService.cs" />
+    <Compile Include="Impl\TeacherCommentService.cs" />
+    <Compile Include="Impl\TeacherHistoryService.cs" />
+    <Compile Include="Impl\TeacherService.cs" />
+    <Compile Include="Impl\TeacherSortService.cs" />
+    <Compile Include="Impl\Teacher_CourseService.cs" />
+    <Compile Include="Impl\TeamService.cs" />
+    <Compile Include="Impl\TestPaperItemService.cs" />
+    <Compile Include="Impl\TestPaperQuesService.cs" />
+    <Compile Include="Impl\TestPaperService.cs" />
+    <Compile Include="Impl\TestResultsService.cs" />
+    <Compile Include="Impl\TestService.cs" />
+    <Compile Include="Impl\TrPlanService.cs" />
+    <Compile Include="Impl\UserGroupService.cs" />
+    <Compile Include="Impl\UserService.cs" />
+    <Compile Include="Impl\VideoService.cs" />
+    <Compile Include="Impl\VoteService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{6bc04561-6f6c-49d4-b5b7-d77503708eb9}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{6C71FF54-74BD-485F-AC71-BC5D3EAF561E}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

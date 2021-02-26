@@ -1,0 +1,92 @@
+using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using Common;
+using ServiceInterfaces;
+using EntitiesInfo;
+using System.Text;
+using System.Reflection;
+using System.Collections.Generic;
+
+namespace SiteShow.Json
+{
+    public partial class QuesRandomSingle : System.Web.UI.Page
+    {       
+        //试卷id，考试id,员工id
+        private int sbjid = Common.Request.Form["sbjid"].Int32 ?? 0;
+        private int diff = Common.Request.Form["diff"].Int32 ?? 0;
+        private int type = Common.Request.Form["type"].Int32 ?? 0;
+        //获取当前学科下的所有试卷
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            EntitiesInfo.Organization org = Business.Do<IOrganization>().OrganCurrent();
+            EntitiesInfo.Questions[] ques = Business.Do<IQuestions>().QuesRandom(org.Org_ID, sbjid, -1, -1, type, diff, diff, true, 1);
+            string tm = "";
+            if (ques.Length > 0)
+            {
+                EntitiesInfo.Questions q = ques[0];
+                q = replaceText(q);
+                tm = q.ToJson();
+                //如果是单选题，或多选题
+                if (q.Qus_Type == 1 || q.Qus_Type == 2 || q.Qus_Type == 5)
+                    tm = getAnserJson(q, tm);
+            }
+            
+            Response.Write(tm);
+            Response.End();
+        }
+        private string getAnserJson(EntitiesInfo.Questions q, string json)
+        {
+            //当前试题的答案
+            EntitiesInfo.QuesAnswer[] ans = Business.Do<IQuestions>().QuestionsAnswer(q, null);
+            string ansStr = "[";
+            for (int i = 0; i < ans.Length; i++)
+            {
+                ansStr += ans[i].ToJson();
+                if (i < ans.Length - 1) ansStr += ",";
+            }
+            ansStr += "]";
+            json = json.Replace("}", ",\"Answer\":" + ansStr + "}");
+            return json;
+        }
+        /// <summary>
+        /// 处理试题中的文本内容
+        /// </summary>
+        /// <param name="qs"></param>
+        /// <returns></returns>
+        private EntitiesInfo.Questions replaceText(EntitiesInfo.Questions qs)
+        {
+            qs.Qus_Title = qs.Qus_Title == null ? "" : qs.Qus_Title;
+            qs.Qus_Title = qs.Qus_Title.Replace("\r","");
+            qs.Qus_Title = qs.Qus_Title.Replace("\n", "");
+            qs.Qus_Title = qs.Qus_Title.Replace("\"", "＂");
+            qs.Qus_Title = qs.Qus_Title.Replace("\t", "");
+            //
+            qs.Qus_Explain = qs.Qus_Explain == null ? "" : qs.Qus_Explain;
+            if (qs.Qus_Explain != string.Empty)
+            {
+                qs.Qus_Explain = qs.Qus_Explain.Replace("\r", "");
+                qs.Qus_Explain = qs.Qus_Explain.Replace("\n", "");
+                qs.Qus_Explain = qs.Qus_Explain.Replace("\"", "＂");
+                qs.Qus_Explain = qs.Qus_Title.Replace("\t", "");
+            }
+            //
+            if (qs.Qus_Answer != string.Empty)
+            {
+                qs.Qus_Answer = qs.Qus_Answer == null ? "" : qs.Qus_Answer;
+                qs.Qus_Answer = qs.Qus_Answer.Replace("\r", "");
+                qs.Qus_Answer = qs.Qus_Answer.Replace("\n", "");
+                qs.Qus_Answer = qs.Qus_Answer.Replace("\"", "＂");
+                qs.Qus_Answer = qs.Qus_Title.Replace("\t", "");
+            }
+            return qs;
+        }
+    }
+}

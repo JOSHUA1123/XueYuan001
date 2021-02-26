@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="hospitalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="MyUser">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="YourPop" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="YourName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Sex" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Age" Type="Int32" />
+    <Property Name="Tel" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Mobile" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="RegDate" Type="DateTime" Precision="3" />
+    <Property Name="IsDel" Type="Boolean" />
+    <Property Name="OperPop" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="classID" Type="Int32" />
+    <Property Name="UsingSickID" Type="String" MaxLength="110" FixedLength="false" Unicode="false" />
+    <Property Name="KeFuPercent" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="BirthYear" Type="Int32" />
+    <Property Name="BirthM" Type="Int32" />
+    <Property Name="BirthD" Type="Int32" />
+    <Property Name="jiaose" Type="Int32" />
+    <Property Name="DelState" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="User_dingding">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" />
+    <Property Name="DingOpenID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DingID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="DingUserEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="MyUser" EntityType="Self.MyUser" />
+    <EntitySet Name="User_dingding" EntityType="Self.User_dingding" />
+    <EntitySet Name="DingTalkUser" EntityType="hospitalModel.DingTalkUser" />
+    <EntitySet Name="MyUser_Yuyue" EntityType="hospitalModel.MyUser_Yuyue" />
+  </EntityContainer>
+  <EntityType Name="DingTalkUser">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="userid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="unionid" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="mobile" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="department" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Editdate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Inputdate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="MyUser_Yuyue">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="mobile" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="department" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="avatar" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="groupID" Type="Int32" />
+    <Property Name="templatesID" Type="Int32" />
+    <Property Name="topUserID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dingdingUserid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="addTime" Type="DateTime" Precision="3" />
+    <Property Name="isDel" Type="Int32" />
+    <Property Name="unionid" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="updateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+</Schema>

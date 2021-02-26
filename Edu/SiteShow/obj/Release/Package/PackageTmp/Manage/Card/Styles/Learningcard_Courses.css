@@ -1,0 +1,9 @@
+﻿/*穿梭框宽度*/
+
+.el-transfer-panel {
+    ---width: calc( (96% - 96px)/2);
+}
+
+.el-checkbox {
+    width: calc(100% - 50px);
+}

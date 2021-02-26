@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="hospitalModelStoreContainer" CdmEntityContainer="DingUserEntities">
+    <EntitySetMapping Name="MyUser">
+      <EntityTypeMapping TypeName="hospitalModel.MyUser">
+        <MappingFragment StoreEntitySet="MyUser">
+          <ScalarProperty Name="DelState" ColumnName="DelState" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="YourPop" ColumnName="YourPop" />
+          <ScalarProperty Name="YourName" ColumnName="YourName" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+          <ScalarProperty Name="IsDel" ColumnName="IsDel" />
+          <ScalarProperty Name="OperPop" ColumnName="OperPop" />
+          <ScalarProperty Name="classID" ColumnName="classID" />
+          <ScalarProperty Name="UsingSickID" ColumnName="UsingSickID" />
+          <ScalarProperty Name="KeFuPercent" ColumnName="KeFuPercent" />
+          <ScalarProperty Name="BirthYear" ColumnName="BirthYear" />
+          <ScalarProperty Name="BirthM" ColumnName="BirthM" />
+          <ScalarProperty Name="BirthD" ColumnName="BirthD" />
+          <ScalarProperty Name="jiaose" ColumnName="jiaose" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_dingding">
+      <EntityTypeMapping TypeName="hospitalModel.User_dingding">
+        <MappingFragment StoreEntitySet="User_dingding">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="DingOpenID" ColumnName="DingOpenID" />
+          <ScalarProperty Name="DingID" ColumnName="DingID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DingTalkUser">
+      <EntityTypeMapping TypeName="hospitalModel.DingTalkUser">
+        <MappingFragment StoreEntitySet="DingTalkUser">
+          <ScalarProperty Name="Inputdate" ColumnName="Inputdate" />
+          <ScalarProperty Name="Editdate" ColumnName="Editdate" />
+          <ScalarProperty Name="department" ColumnName="department" />
+          <ScalarProperty Name="mobile" ColumnName="mobile" />
+          <ScalarProperty Name="unionid" ColumnName="unionid" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MyUser_Yuyue">
+      <EntityTypeMapping TypeName="hospitalModel.MyUser_Yuyue">
+        <MappingFragment StoreEntitySet="MyUser_Yuyue">
+          <ScalarProperty Name="updateTime" ColumnName="updateTime" />
+          <ScalarProperty Name="unionid" ColumnName="unionid" />
+          <ScalarProperty Name="isDel" ColumnName="isDel" />
+          <ScalarProperty Name="addTime" ColumnName="addTime" />
+          <ScalarProperty Name="dingdingUserid" ColumnName="dingdingUserid" />
+          <ScalarProperty Name="topUserID" ColumnName="topUserID" />
+          <ScalarProperty Name="templatesID" ColumnName="templatesID" />
+          <ScalarProperty Name="groupID" ColumnName="groupID" />
+          <ScalarProperty Name="avatar" ColumnName="avatar" />
+          <ScalarProperty Name="department" ColumnName="department" />
+          <ScalarProperty Name="mobile" ColumnName="mobile" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

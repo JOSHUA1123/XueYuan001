@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5A3A6656-2DC8-48AC-B33A-2A73CA83CE23}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Common</RootNamespace>
+    <AssemblyName>Common</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging, Version=3.0.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.3.0.0\lib\net40\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.0.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.Core.3.0.0\lib\net40\Common.Logging.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core, Version=2.0.1.45000, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spring.Core.2.0.1\lib\net45\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activationcode.cs" />
+    <Compile Include="ActivationType.cs" />
+    <Compile Include="App.cs" />
+    <Compile Include="Browser.cs" />
+    <Compile Include="Business.cs" />
+    <Compile Include="Cache.cs" />
+    <Compile Include="CacheDataCollection.cs" />
+    <Compile Include="com\google\zxing\BarcodeFormat.cs" />
+    <Compile Include="com\google\zxing\Binarizer.cs" />
+    <Compile Include="com\google\zxing\BinaryBitmap.cs" />
+    <Compile Include="com\google\zxing\client\result\AbstractDoCoMoResultParser.cs" />
+    <Compile Include="com\google\zxing\client\result\AddressBookAUResultParser.cs" />
+    <Compile Include="com\google\zxing\client\result\AddressBookDoCoMoResultParser.cs" />
+    <Compile Include="com\google\zxing\client\result\AddressBookParsedResult.cs" />
+    <Compile Include="com\google\zxing\client\result\BizcardResultParser.cs" />
+    <Compile Include="com\google\zxing\client\result\BookmarkDoCoMoResultParser.cs" />
+    <Compile Include="com\google\zxing\client\result\CalendarParsedResult.cs" />
+    <Compile Include="com\google\zxing\client\result\EmailAddressParsedResult.cs" />
+    <Compile Include="com\google\zxing\client\result\EmailAddressResultParser.cs" />
+    <Compile Include="com\google\zxing\client\result\EmailDoCoMoResultParser.cs" />
+    <Compile Include="com\google\zxing\client\result\GeoParsedResult.cs" />
+    <Compile Include="com\google\zxing\client\result\GeoResultParser.cs" />
+    <Compile Include="com\google\zxing\client\result\ISBNParsedResult.cs" />
+    <Compile Include="com\google\zxing\client\result\ISBNResultParser.cs" />
+    <Compile Include="com\google\zxing\client\result\optional\AbstractNDEFResultParser.cs" />
+    <Compile Include="com\google\zxing\client\result\optional\NDEFRecord.cs" />
+    <Compile Include="com\google\zxing\client\result\optional\NDEFSmartPosterParsedResult.cs" />
+    <Compile Include="com\google\zxing\client\result\optional\NDEFSmartPosterResultParser.cs" />
+    <Compile Include="com\google\zxing\client\result\optional\NDEFTextResultParser.cs" />
+    <Compile Include="com\google\zxing\client\result\optional\NDEFURIResultParser.cs" />
+    <Compile Include="com\google\zxing\client\result\ParsedResult.cs" />
+    <Compile Include="com\google\zxing\client\result\ParsedResultType.cs" />
+    <Compile Include="com\google\zxing\client\result\ProductParsedResult.cs" />
+    <Compile Include="com\google\zxing\client\result\ProductResultParser.cs" />
+    <Compile Include="com\google\zxing\client\result\ResultParser.cs" />
+    <Compile Include="com\google\zxing\client\result\SMSMMSResultParser.cs" />
+    <Compile Include="com\google\zxing\client\result\SMSParsedResult.cs" />
+    <Compile Include="com\google\zxing\client\result\TelParsedResult.cs" />
+    <Compile Include="com\google\zxing\client\result\TelResultParser.cs" />
+    <Compile Include="com\google\zxing\client\result\TextParsedResult.cs" />
+    <Compile Include="com\google\zxing\client\result\URIParsedResult.cs" />
+    <Compile Include="com\google\zxing\client\result\URIResultParser.cs" />
+    <Compile Include="com\google\zxing\client\result\URLTOResultParser.cs" />
+    <Compile Include="com\google\zxing\client\result\VCardResultParser.cs" />
+    <Compile Include="com\google\zxing\client\result\VEventResultParser.cs" />
+    <Compile Include="com\google\zxing\common\BitArray.cs" />
+    <Compile Include="com\google\zxing\common\BitMatrix.cs" />
+    <Compile Include="com\google\zxing\common\BitSource.cs" />
+    <Compile Include="com\google\zxing\common\ByteArray.cs" />
+    <Compile Include="com\google\zxing\common\ByteMatrix.cs" />
+    <Compile Include="com\google\zxing\common\CharacterSetECI.cs" />
+    <Compile Include="com\google\zxing\common\Collections.cs" />
+    <Compile Include="com\google\zxing\common\Comparator.cs" />
+    <Compile Include="com\google\zxing\common\DecoderResult.cs" />
+    <Compile Include="com\google\zxing\common\DefaultGridSampler.cs" />
+    <Compile Include="com\google\zxing\common\DetectorResult.cs" />
+    <Compile Include="com\google\zxing\common\detector\MonochromeRectangleDetector.cs" />
+    <Compile Include="com\google\zxing\common\ECI.cs" />
+    <Compile Include="com\google\zxing\common\GlobalHistogramBinarizer.cs" />
+    <Compile Include="com\google\zxing\common\GridSampler.cs" />
+    <Compile Include="com\google\zxing\common\HybridBinarizer.cs" />
+    <Compile Include="com\google\zxing\common\PerspectiveTransform.cs" />
+    <Compile Include="com\google\zxing\common\reedsolomon\GF256.cs" />
+    <Compile Include="com\google\zxing\common\reedsolomon\GF256Poly.cs" />
+    <Compile Include="com\google\zxing\common\reedsolomon\ReedSolomonDecoder.cs" />
+    <Compile Include="com\google\zxing\common\reedsolomon\ReedSolomonEncoder.cs" />
+    <Compile Include="com\google\zxing\common\reedsolomon\ReedSolomonException.cs" />
+    <Compile Include="com\google\zxing\datamatrix\DataMatrixReader.cs" />
+    <Compile Include="com\google\zxing\datamatrix\decoder\BitMatrixParser.cs" />
+    <Compile Include="com\google\zxing\datamatrix\decoder\DataBlock.cs" />
+    <Compile Include="com\google\zxing\datamatrix\decoder\DecodedBitStreamParser.cs" />
+    <Compile Include="com\google\zxing\datamatrix\decoder\Decoder.cs" />
+    <Compile Include="com\google\zxing\datamatrix\decoder\Version.cs" />
+    <Compile Include="com\google\zxing\datamatrix\detector\Detector.cs" />
+    <Compile Include="com\google\zxing\DecodeHintType.cs" />
+    <Compile Include="com\google\zxing\EncodeHintType.cs" />
+    <Compile Include="com\google\zxing\LuminanceSource.cs" />
+    <Compile Include="com\google\zxing\MultiFormatReader.cs" />
+    <Compile Include="com\google\zxing\MultiFormatWriter.cs" />
+    <Compile Include="com\google\zxing\multi\ByQuadrantReader.cs" />
+    <Compile Include="com\google\zxing\multi\GenericMultipleBarcodeReader.cs" />
+    <Compile Include="com\google\zxing\multi\MultipleBarcodeReader.cs" />
+    <Compile Include="com\google\zxing\multi\qrcode\detector\MultiDetector.cs" />
+    <Compile Include="com\google\zxing\multi\qrcode\detector\MultiFinderPatternFinder.cs" />
+    <Compile Include="com\google\zxing\multi\qrcode\QRCodeMultiReader.cs" />
+    <Compile Include="com\google\zxing\oned\Code128Reader.cs" />
+    <Compile Include="com\google\zxing\oned\Code39Reader.cs" />
+    <Compile Include="com\google\zxing\oned\Code39Writer.cs" />
+    <Compile Include="com\google\zxing\oned\EAN13Reader.cs" />
+    <Compile Include="com\google\zxing\oned\EAN13Writer.cs" />
+    <Compile Include="com\google\zxing\oned\EAN8Reader.cs" />
+    <Compile Include="com\google\zxing\oned\EAN8Writer.cs" />
+    <Compile Include="com\google\zxing\oned\ITFReader.cs" />
+    <Compile Include="com\google\zxing\oned\MultiFormatOneDReader.cs" />
+    <Compile Include="com\google\zxing\oned\MultiFormatUPCEANReader.cs" />
+    <Compile Include="com\google\zxing\oned\OneDReader.cs" />
+    <Compile Include="com\google\zxing\oned\UPCAReader.cs" />
+    <Compile Include="com\google\zxing\oned\UPCEANReader.cs" />
+    <Compile Include="com\google\zxing\oned\UPCEANWriter.cs" />
+    <Compile Include="com\google\zxing\oned\UPCEReader.cs" />
+    <Compile Include="com\google\zxing\pdf417\decoder\BitMatrixParser.cs" />
+    <Compile Include="com\google\zxing\pdf417\decoder\DecodedBitStreamParser.cs" />
+    <Compile Include="com\google\zxing\pdf417\decoder\Decoder.cs" />
+    <Compile Include="com\google\zxing\pdf417\detector\Detector.cs" />
+    <Compile Include="com\google\zxing\pdf417\PDF417Reader.cs" />
+    <Compile Include="com\google\zxing\qrcode\decoder\BitMatrixParser.cs" />
+    <Compile Include="com\google\zxing\qrcode\decoder\DataBlock.cs" />
+    <Compile Include="com\google\zxing\qrcode\decoder\DataMask.cs" />
+    <Compile Include="com\google\zxing\qrcode\decoder\DecodedBitStreamParser.cs" />
+    <Compile Include="com\google\zxing\qrcode\decoder\Decoder.cs" />
+    <Compile Include="com\google\zxing\qrcode\decoder\ErrorCorrectionLevel.cs" />
+    <Compile Include="com\google\zxing\qrcode\decoder\FormatInformation.cs" />
+    <Compile Include="com\google\zxing\qrcode\decoder\Mode.cs" />
+    <Compile Include="com\google\zxing\qrcode\decoder\Version.cs" />
+    <Compile Include="com\google\zxing\qrcode\detector\AlignmentPattern.cs" />
+    <Compile Include="com\google\zxing\qrcode\detector\AlignmentPatternFinder.cs" />
+    <Compile Include="com\google\zxing\qrcode\detector\Detector.cs" />
+    <Compile Include="com\google\zxing\qrcode\detector\FinderPattern.cs" />
+    <Compile Include="com\google\zxing\qrcode\detector\FinderPatternFinder.cs" />
+    <Compile Include="com\google\zxing\qrcode\detector\FinderPatternInfo.cs" />
+    <Compile Include="com\google\zxing\qrcode\encoder\BitVector.cs" />
+    <Compile Include="com\google\zxing\qrcode\encoder\BlockPair.cs" />
+    <Compile Include="com\google\zxing\qrcode\encoder\Encoder.cs" />
+    <Compile Include="com\google\zxing\qrcode\encoder\MaskUtil.cs" />
+    <Compile Include="com\google\zxing\qrcode\encoder\MatrixUtil.cs" />
+    <Compile Include="com\google\zxing\qrcode\encoder\QRCode.cs" />
+    <Compile Include="com\google\zxing\qrcode\QRCodeReader.cs" />
+    <Compile Include="com\google\zxing\qrcode\QRCodeWriter.cs" />
+    <Compile Include="com\google\zxing\Reader.cs" />
+    <Compile Include="com\google\zxing\ReaderException.cs" />
+    <Compile Include="com\google\zxing\Result.cs" />
+    <Compile Include="com\google\zxing\ResultMetadataType.cs" />
+    <Compile Include="com\google\zxing\ResultPoint.cs" />
+    <Compile Include="com\google\zxing\ResultPointCallback.cs" />
+    <Compile Include="com\google\zxing\Writer.cs" />
+    <Compile Include="com\google\zxing\WriterException.cs" />
+    <Compile Include="Copyright.cs" />
+    <Compile Include="CustomConfig.cs" />
+    <Compile Include="CustomConfigItem.cs" />
+    <Compile Include="Data.cs" />
+    <Compile Include="DataConvert.cs" />
+    <Compile Include="Entity.cs" />
+    <Compile Include="ExceptionForAlert.cs" />
+    <Compile Include="ExceptionForLicense.cs" />
+    <Compile Include="ExceptionForNoLogin.cs" />
+    <Compile Include="ExceptionForNoPurview.cs" />
+    <Compile Include="ExceptionForPrompt.cs" />
+    <Compile Include="ExceptionForWarning.cs" />
+    <Compile Include="HTML.cs" />
+    <Compile Include="IBusinessInterface.cs" />
+    <Compile Include="IDCardNumber.cs" />
+    <Compile Include="Images\FileTo.cs" />
+    <Compile Include="Images\ImageTo.cs" />
+    <Compile Include="License.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="Login.cs" />
+    <Compile Include="LoginItem.cs" />
+    <Compile Include="Method\Domain.cs" />
+    <Compile Include="PageCache.cs" />
+    <Compile Include="PageHelper.cs" />
+    <Compile Include="Parameters\Authorization\VersionLevel.cs" />
+    <Compile Include="Parameters\Authorization\VersionLimit.cs" />
+    <Compile Include="Param\Method\ConvertToAnyValue.cs" />
+    <Compile Include="Param\Method\PageInfo.cs" />
+    <Compile Include="Param\Method\Position.cs" />
+    <Compile Include="Param\Method\_Path.cs" />
+    <Compile Include="Platform.cs" />
+    <Compile Include="PlatformInfoHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QrcodeHepler.cs" />
+    <Compile Include="Request.cs" />
+    <Compile Include="RGBLuminanceSource.cs" />
+    <Compile Include="Server.cs" />
+    <Compile Include="Skip.cs" />
+    <Compile Include="SupportClass.cs" />
+    <Compile Include="Template.cs" />
+    <Compile Include="Templates\TemplateBank.cs" />
+    <Compile Include="Templates\TemplateConfingItem.cs" />
+    <Compile Include="Upload.cs" />
+    <Compile Include="VideoConverter\FfmpegHandler.cs" />
+    <Compile Include="VideoConverter\IVideoHanlder.cs" />
+    <Compile Include="VideoConverter\MencoderHandler.cs" />
+    <Compile Include="VideoHandler.cs" />
+    <Compile Include="WebConfigItem.cs" />
+    <Compile Include="XmlDocumentHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
